@@ -1,7 +1,7 @@
 import { GlowContainer } from '../ui/effects/glow-container'
 import { Gamepad2, Video } from 'lucide-react'
 
-interface TabButtonsProps {
+export interface TabButtonsProps {
   activeTab: 'gaming' | 'videos'
   onChange: (tab: 'gaming' | 'videos') => void
 }
