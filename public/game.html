@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Incredibox Sprunki</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #000;
+    }
+    #game-container {
+      width: 100%;
+      height: calc(100% - 0px);
+      overflow: hidden;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+  <div id="game-container"></div>
+  <script>
+    window.onload = function() {
+      const container = document.getElementById('game-container');
+      const gameScript = document.createElement('script');
+      gameScript.src = '/incrediboxsprunkimod/script.js';
+      gameScript.async = true;
+      gameScript.onload = function() {
+        if (window.Game) {
+          new Game(container);
+        }
+      };
+      document.body.appendChild(gameScript);
+    };
+  </script>
+</body>
+</html>

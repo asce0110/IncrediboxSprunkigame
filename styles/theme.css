@@ -1,0 +1,12 @@
+/* Theme-specific styles and variables */
+:root {
+  --primary-color: #2EE59D;
+  --primary-glow: rgba(46, 229, 157, 0.2);
+  --primary-hover: rgba(46, 229, 157, 0.9);
+}
+
+.theme-glow {
+  --glow-size: 2rem;
+  --glow-blur: 1rem;
+  --glow-opacity: 0.2;
+}
