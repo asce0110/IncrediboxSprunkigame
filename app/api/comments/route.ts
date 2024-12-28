@@ -209,8 +209,7 @@ export async function PUT(request: Request) {
   try {
     const { commentId, action } = await request.json()
     const comments = await fetchComments()
-    const comment = comments.find(c => c.id === commentId)
-    
+    const comment = comments.find((c: { id: string }) => c.id === commentId)    
     if (!comment) {
       return new NextResponse('Comment not found', { status: 404 })
     }
@@ -219,8 +218,7 @@ export async function PUT(request: Request) {
       const userHasLiked = comment.likedBy.includes(session.user.email || '')
       if (userHasLiked) {
         comment.likes -= 1
-        comment.likedBy = comment.likedBy.filter(email => email !== session.user.email)
-      } else {
+        comment.likedBy = comment.likedBy.filter((email: string) => email !== session.user?.email)      } else {
         comment.likes += 1
         comment.likedBy.push(session.user.email || '')
       }
