@@ -1,3 +1,11 @@
+export interface GameEmbedConfig {
+  gameId: string;
+  backgroundColor?: string;
+  textColor?: string;
+  linkColor?: string;
+  borderColor?: string;
+}
+
 export function buildEmbedUrl(config: GameEmbedConfig): string {
   const {
     gameId,
