@@ -11,28 +11,28 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: '/favicon.ico',
+        url: 'https://s.incrediboxsprunkimod.com/public/favicon.ico',
         sizes: 'any',
       },
       {
-        url: '/favicon-96x96.png',
+        url: 'https://s.incrediboxsprunkimod.com/public/favicon-96x96.png',
         type: 'image/png',
         sizes: '96x96',
       },
       {
-        url: '/web-app-manifest-192x192.png',
+        url: 'https://s.incrediboxsprunkimod.com/public/web-app-manifest-192x192.png',
         type: 'image/png',
         sizes: '192x192',
       },
       {
-        url: '/web-app-manifest-512x512.png',
+        url: 'https://s.incrediboxsprunkimod.com/public/web-app-manifest-512x512.png',
         type: 'image/png',
         sizes: '512x512',
       },
     ],
     apple: [
       {
-        url: '/apple-touch-icon.png',
+        url: 'https://s.incrediboxsprunkimod.com/public/apple-touch-icon.png',
         type: 'image/png',
         sizes: '180x180',
       },
