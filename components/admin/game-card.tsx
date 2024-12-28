@@ -14,7 +14,7 @@ export function GameCard({ game }: GameCardProps) {
     <div className="bg-black/50 rounded-lg overflow-hidden">
       <div className="relative h-48">
         <Image
-          src={game.cover_image}
+          src={game.image_url || ''}
           alt={game.title}
           fill
           className="object-cover"
