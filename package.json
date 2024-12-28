@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npx next build",
+    "build": "node node_modules/next/dist/bin/next build",
     "start": "next start",
     "lint": "next lint"
   },
@@ -36,6 +36,6 @@
     "typescript": "5.3.3"
   },
   "engines": {
-    "node": ">=16.0.0"
+    "node": "18.x"
   }
 }
