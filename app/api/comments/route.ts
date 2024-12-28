@@ -3,9 +3,13 @@ import { getServerSession } from 'next-auth'
 import { headers } from 'next/headers'
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN
-const REPO_OWNER = process.env.GITHUB_REPO_OWNER || ''
-const REPO_NAME = process.env.GITHUB_REPO_NAME || ''
+const REPO_OWNER = process.env.GITHUB_REPO_OWNER
+const REPO_NAME = process.env.GITHUB_REPO_NAME
 const FILE_PATH = 'data/comments.json'
+
+if (!GITHUB_TOKEN || !REPO_OWNER || !REPO_NAME) {
+  throw new Error('Missing required GitHub configuration')
+}
 
 async function getLocationFromIP(ip: string) {
   try {
@@ -30,8 +34,9 @@ async function fetchComments() {
       `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${FILE_PATH}`,
       {
         headers: {
-          Authorization: `token ${GITHUB_TOKEN}`,
-          'Accept': 'application/vnd.github.v3+json'
+          'Authorization': `Bearer ${GITHUB_TOKEN}`,
+          'Accept': 'application/vnd.github.v3+json',
+          'X-GitHub-Api-Version': '2022-11-28'
         },
         cache: 'no-store'
       }
@@ -46,8 +51,9 @@ async function fetchComments() {
         {
           method: 'PUT',
           headers: {
-            Authorization: `token ${GITHUB_TOKEN}`,
+            'Authorization': `Bearer ${GITHUB_TOKEN}`,
             'Accept': 'application/vnd.github.v3+json',
+            'X-GitHub-Api-Version': '2022-11-28',
             'Content-Type': 'application/json'
           },
           body: JSON.stringify({
@@ -94,8 +100,9 @@ async function saveComments(comments: any[], message: string) {
       `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${FILE_PATH}`,
       {
         headers: {
-          Authorization: `token ${GITHUB_TOKEN}`,
-          'Accept': 'application/vnd.github.v3+json'
+          'Authorization': `Bearer ${GITHUB_TOKEN}`,
+          'Accept': 'application/vnd.github.v3+json',
+          'X-GitHub-Api-Version': '2022-11-28'
         },
         cache: 'no-store'
       }
@@ -117,8 +124,9 @@ async function saveComments(comments: any[], message: string) {
       {
         method: 'PUT',
         headers: {
-          Authorization: `token ${GITHUB_TOKEN}`,
+          'Authorization': `Bearer ${GITHUB_TOKEN}`,
           'Accept': 'application/vnd.github.v3+json',
+          'X-GitHub-Api-Version': '2022-11-28',
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
