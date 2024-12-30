@@ -9,10 +9,10 @@ export function FeaturedContent() {
   const [activeTab, setActiveTab] = useState<'gaming' | 'videos'>('gaming')
 
   return (
-    <section className="py-12 px-4">
+    <section className="py-8 sm:py-12 px-4">
       <div className="max-w-7xl mx-auto">
-        <div className="flex justify-between items-center mb-8">
-          <h2 className="text-3xl font-bold text-[#2EE59D]">Sprunked Games</h2>
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-8 mb-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#2EE59D]">Sprunked Games</h2>
           <TabButtons activeTab={activeTab} onChange={setActiveTab} />
         </div>
         

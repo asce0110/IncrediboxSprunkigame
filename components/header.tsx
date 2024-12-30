@@ -38,14 +38,15 @@ export function Header() {
         <div className="container mx-auto px-4">
           <div className="flex h-16 items-center justify-between">
             {/* Logo */}
-            <GlowContainer intensity="low">
+            <div className="cursor-pointer">
               <Link 
-                href="/" 
-                className="text-2xl font-bold text-[#2EE59D] hover:opacity-80 transition-opacity"
+                href="/"
+                className="block text-2xl font-bold text-[#2EE59D] hover:opacity-80 transition-all duration-300 hover:scale-105"
+                title="Return to Homepage"
               >
                 Incredibox<span className="text-white">Sprunki</span>Mod
               </Link>
-            </GlowContainer>
+            </div>
 
             {/* Navigation */}
             <div className="flex items-center">
