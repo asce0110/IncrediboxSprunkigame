@@ -30,23 +30,24 @@ export default function SprunckiAlivePage() {
         <div className="container mx-auto py-4 px-4">
           <div className="max-w-4xl mx-auto">
             {/* SEO优化的标题区域 */}
-            <div className="mb-4 flex items-center gap-6">
+            <div className="mb-6 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
               <Link 
                 href="/" 
-                className="group flex items-center justify-center w-12 h-12 rounded-full bg-black/50 hover:bg-[#2EE59D]/10 transition-all duration-300"
+                className="group flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black/50 hover:bg-[#2EE59D]/10 transition-all duration-300 shrink-0"
               >
                 <div className="relative">
                   <div className="absolute inset-0 rounded-full bg-[#2EE59D]/20 blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <ArrowLeft className="w-6 h-6 text-[#2EE59D] relative z-10" />
+                  <ArrowLeft className="w-5 h-5 sm:w-6 sm:h-6 text-[#2EE59D] relative z-10" />
                 </div>
               </Link>
 
-              <div>
-                <h1 className="text-4xl font-bold text-[#2EE59D] mb-2">
-                  Sprunki Alive - Dynamic Music Creation on IncrediboxSprunkiMod
+              <div className="w-full">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#2EE59D] mb-2 break-words">
+                  Sprunki Alive
+                  <span className="block text-lg sm:text-xl md:text-2xl mt-1 text-white/90">Dynamic Music Creation</span>
                 </h1>
-                <p className="text-gray-400 text-lg">
-                  Experience the Most Engaging Music Creation Game on IncrediboxSprunkiMod - Play Sprunki Alive Now
+                <p className="text-sm sm:text-base md:text-lg text-gray-400">
+                  Experience the Most Engaging Music Creation Game
                 </p>
               </div>
             </div>
@@ -74,73 +75,73 @@ export default function SprunckiAlivePage() {
 
             {/* 游戏介绍和SEO内容 */}
             <div className="mt-8 space-y-6">
-              <div className="p-6 bg-black/50 rounded-xl">
-                <h2 className="text-2xl font-semibold text-[#2EE59D] mb-4">
-                  About Sprunki Alive on IncrediboxSprunkiMod
+              <div className="p-4 sm:p-6 bg-black/50 rounded-xl">
+                <h2 className="text-xl sm:text-2xl font-semibold text-[#2EE59D] mb-4">
+                  About Sprunki Alive
                 </h2>
-                <p className="text-gray-300 mb-4">
-                  Discover Sprunki Alive, the latest evolution in music creation games exclusively on IncrediboxSprunkiMod.com. This innovative addition to our platform brings a fresh perspective to interactive music making, combining intuitive controls with dynamic sound generation.
+                <p className="text-sm sm:text-base text-gray-300 mb-4">
+                  Welcome to Sprunki Alive, where music creation comes to life. This innovative game combines intuitive controls with dynamic sound generation, offering a unique musical experience for creators of all skill levels.
                 </p>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
-                  <div className="flex flex-col items-center p-4 bg-black/30 rounded-lg">
-                    <span className="text-[#2EE59D] font-bold text-lg mb-2">Dynamic Music</span>
-                    <span className="text-gray-400 text-center">Create evolving musical compositions</span>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mt-6">
+                  <div className="flex flex-col items-center p-3 sm:p-4 bg-black/30 rounded-lg">
+                    <span className="text-[#2EE59D] font-bold text-base sm:text-lg mb-1 sm:mb-2">Create</span>
+                    <span className="text-sm sm:text-base text-gray-400 text-center">Mix and match different beats</span>
                   </div>
-                  <div className="flex flex-col items-center p-4 bg-black/30 rounded-lg">
-                    <span className="text-[#2EE59D] font-bold text-lg mb-2">Live Creation</span>
-                    <span className="text-gray-400 text-center">Real-time music generation</span>
+                  <div className="flex flex-col items-center p-3 sm:p-4 bg-black/30 rounded-lg">
+                    <span className="text-[#2EE59D] font-bold text-base sm:text-lg mb-1 sm:mb-2">Play</span>
+                    <span className="text-sm sm:text-base text-gray-400 text-center">Interactive music creation</span>
                   </div>
-                  <div className="flex flex-col items-center p-4 bg-black/30 rounded-lg">
-                    <span className="text-[#2EE59D] font-bold text-lg mb-2">Unique Sounds</span>
-                    <span className="text-gray-400 text-center">Exclusive sound library</span>
+                  <div className="flex flex-col items-center p-3 sm:p-4 bg-black/30 rounded-lg">
+                    <span className="text-[#2EE59D] font-bold text-base sm:text-lg mb-1 sm:mb-2">Share</span>
+                    <span className="text-sm sm:text-base text-gray-400 text-center">Show off your creations</span>
                   </div>
                 </div>
               </div>
 
               {/* 游戏特点 */}
-              <div className="p-6 bg-black/50 rounded-xl">
-                <h2 className="text-2xl font-semibold text-[#2EE59D] mb-6">
+              <div className="p-4 sm:p-6 bg-black/50 rounded-xl">
+                <h2 className="text-xl sm:text-2xl font-semibold text-[#2EE59D] mb-4 sm:mb-6">
                   Why Play Sprunki Alive?
                 </h2>
                 <div className="space-y-4">
                   <div className="border-b border-[#2EE59D]/10 pb-4">
-                    <h3 className="text-lg font-medium text-white mb-2">Dynamic Music Creation</h3>
-                    <p className="text-gray-400">Experience real-time music generation with Sprunki Alive's innovative system on IncrediboxSprunkiMod.</p>
+                    <h3 className="text-base sm:text-lg font-medium text-white mb-2">Dynamic Music Creation</h3>
+                    <p className="text-sm sm:text-base text-gray-400">Experience real-time music generation with our innovative system.</p>
                   </div>
 
                   <div className="border-b border-[#2EE59D]/10 pb-4">
-                    <h3 className="text-lg font-medium text-white mb-2">Exclusive Sound Library</h3>
-                    <p className="text-gray-400">Access a unique collection of sounds and beats created specifically for Sprunki Alive on IncrediboxSprunkiMod.</p>
+                    <h3 className="text-base sm:text-lg font-medium text-white mb-2">Exclusive Sound Library</h3>
+                    <p className="text-sm sm:text-base text-gray-400">Access a unique collection of sounds and beats.</p>
                   </div>
 
                   <div className="border-b border-[#2EE59D]/10 pb-4">
-                    <h3 className="text-lg font-medium text-white mb-2">Intuitive Interface</h3>
-                    <p className="text-gray-400">Enjoy a user-friendly interface that makes music creation accessible to everyone on IncrediboxSprunkiMod.</p>
+                    <h3 className="text-base sm:text-lg font-medium text-white mb-2">Intuitive Interface</h3>
+                    <p className="text-sm sm:text-base text-gray-400">User-friendly interface for everyone.</p>
                   </div>
 
                   <div className="border-b border-[#2EE59D]/10 pb-4">
-                    <h3 className="text-lg font-medium text-white mb-2">Live Performance</h3>
-                    <p className="text-gray-400">Create and perform music in real-time with responsive controls and instant feedback.</p>
+                    <h3 className="text-base sm:text-lg font-medium text-white mb-2">Live Performance</h3>
+                    <p className="text-sm sm:text-base text-gray-400">Create and perform music in real-time.</p>
                   </div>
                 </div>
               </div>
 
               {/* 评论区 */}
               <div className="bg-black/50 rounded-xl">
-                <div className="p-6 border-b border-[#2EE59D]/10">
-                  <h2 className="text-2xl font-semibold text-[#2EE59D]">Comments</h2>
+                <div className="p-4 sm:p-6 border-b border-[#2EE59D]/10">
+                  <h2 className="text-xl sm:text-2xl font-semibold text-[#2EE59D]">Comments</h2>
                 </div>
                 <div className="h-[400px] overflow-y-auto custom-scrollbar">
-                  <div className="p-6">
+                  <div className="p-4 sm:p-6">
                     <Comments />
                   </div>
                 </div>
               </div>
 
               {/* FAQ Section */}
-              <div className="p-6 bg-black/50 rounded-xl">
-                <h2 className="text-2xl font-semibold text-[#2EE59D] mb-6">
-                  Frequently Asked Questions
+              <div className="p-4 sm:p-6 bg-black/50 rounded-xl">
+                <h2 className="text-xl sm:text-2xl font-semibold text-[#2EE59D] mb-4 sm:mb-6">
+                  FAQ
                 </h2>
                 <div className="space-y-4">
                   <div className="border-b border-[#2EE59D]/10 pb-4">
