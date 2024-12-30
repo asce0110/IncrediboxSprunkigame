@@ -11,9 +11,11 @@ export function FeaturedContent() {
   return (
     <section className="py-8 sm:py-12 px-4">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-8 mb-8">
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#2EE59D]">Sprunked Games</h2>
-          <TabButtons activeTab={activeTab} onChange={setActiveTab} />
+        <div className="flex flex-col gap-4 mb-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#2EE59D] text-center sm:text-left">Sprunked Games</h2>
+          <div className="w-full">
+            <TabButtons activeTab={activeTab} onChange={setActiveTab} />
+          </div>
         </div>
         
         {activeTab === 'gaming' ? <GamingContent /> : <VideosContent />}

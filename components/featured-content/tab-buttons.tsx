@@ -1,16 +1,16 @@
 import { Gamepad2, Video } from 'lucide-react'
 
-interface TabButtonsProps {
+export interface TabButtonsProps {
   activeTab: 'gaming' | 'videos'
   onChange: (tab: 'gaming' | 'videos') => void
 }
 
 export function TabButtons({ activeTab, onChange }: TabButtonsProps) {
   return (
-    <div className="flex gap-3 sm:gap-6">
+    <div className="flex w-full justify-center sm:justify-start gap-4">
       <button
         onClick={() => onChange('gaming')}
-        className="group relative"
+        className="group relative min-w-[120px] flex-1 sm:flex-none"
       >
         {/* 不规则背景形状 - 激活状态 */}
         {activeTab === 'gaming' && (
@@ -28,12 +28,12 @@ export function TabButtons({ activeTab, onChange }: TabButtonsProps) {
         }`} />
         
         {/* 按钮内容 */}
-        <div className={`relative flex items-center gap-2 sm:gap-3 px-4 sm:px-8 py-2 sm:py-3 rounded-xl transition-all duration-500 ${
+        <div className={`relative flex items-center justify-center gap-2 sm:gap-3 px-4 sm:px-8 py-3 rounded-xl transition-all duration-500 w-full ${
           activeTab === 'gaming'
             ? 'bg-[#2EE59D] text-black font-medium'
             : 'text-[#2EE59D] hover:text-white'
         }`}>
-          <Gamepad2 className={`w-4 h-4 sm:w-5 sm:h-5 transition-all duration-300 ${
+          <Gamepad2 className={`w-5 h-5 transition-all duration-300 ${
             activeTab === 'gaming' ? 'scale-110' : 'group-hover:scale-110'
           }`} />
           <span className="text-base sm:text-lg whitespace-nowrap">Gaming</span>
@@ -42,7 +42,7 @@ export function TabButtons({ activeTab, onChange }: TabButtonsProps) {
 
       <button
         onClick={() => onChange('videos')}
-        className="group relative"
+        className="group relative min-w-[120px] flex-1 sm:flex-none"
       >
         {/* 不规则背景形状 - 激活状态 */}
         {activeTab === 'videos' && (
@@ -60,12 +60,12 @@ export function TabButtons({ activeTab, onChange }: TabButtonsProps) {
         }`} />
         
         {/* 按钮内容 */}
-        <div className={`relative flex items-center gap-2 sm:gap-3 px-4 sm:px-8 py-2 sm:py-3 rounded-xl transition-all duration-500 ${
+        <div className={`relative flex items-center justify-center gap-2 sm:gap-3 px-4 sm:px-8 py-3 rounded-xl transition-all duration-500 w-full ${
           activeTab === 'videos'
             ? 'bg-[#2EE59D] text-black font-medium'
             : 'text-[#2EE59D] hover:text-white'
         }`}>
-          <Video className={`w-4 h-4 sm:w-5 sm:h-5 transition-all duration-300 ${
+          <Video className={`w-5 h-5 transition-all duration-300 ${
             activeTab === 'videos' ? 'scale-110' : 'group-hover:scale-110'
           }`} />
           <span className="text-base sm:text-lg whitespace-nowrap">Videos</span>
