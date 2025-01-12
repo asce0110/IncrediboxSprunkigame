@@ -21,30 +21,29 @@ export function FeaturedGameCard({
 }: FeaturedGameCardProps) {
   return (
     <Link href={href}>
-      <div className="group relative bg-black/50 rounded-md overflow-hidden transition-transform hover:scale-[1.02] hover:shadow-sm hover:shadow-[#2EE59D]/10">
-        <div className="aspect-[3/2] relative">
+      <div className="group relative bg-black/50 rounded-[4px] overflow-hidden transition-transform hover:scale-[1.02]">
+        <div className="aspect-[4/3] relative">
           <img
             src={image}
             alt={title}
             className="absolute inset-0 w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
         </div>
-        <div className="p-1.5">
-          <h3 className="text-[10px] leading-tight font-medium text-[#2EE59D] mb-0.5 line-clamp-1">{title}</h3>
-          <p className="text-[8px] leading-tight text-gray-400 mb-1 line-clamp-2 min-h-[2em]">{description}</p>
-          <div className="flex items-center justify-between text-[8px]">
+        <div className="p-1">
+          <h3 className="text-[8px] leading-snug font-medium text-[#2EE59D] truncate">{title}</h3>
+          <p className="text-[7px] leading-snug text-gray-400 line-clamp-1 min-h-[1.5em] opacity-80">{description}</p>
+          <div className="flex items-center justify-between text-[7px] mt-0.5">
             <div className="flex items-center gap-0.5">
-              <Star className="w-2 h-2 text-yellow-400 fill-yellow-400" />
+              <Star className="w-1.5 h-1.5 text-yellow-400 fill-yellow-400" />
               <span className="text-yellow-400">{rating}</span>
             </div>
             <div className="flex items-center gap-0.5">
-              <Users className="w-2 h-2 text-blue-400" />
+              <Users className="w-1.5 h-1.5 text-blue-400" />
               <span className="text-blue-400">{players >= 1000 ? `${(players/1000).toFixed(1)}k` : players}</span>
             </div>
           </div>
         </div>
-        <div className="absolute inset-0 border border-transparent group-hover:border-[#2EE59D]/50 rounded-md transition-colors" />
       </div>
     </Link>
   )

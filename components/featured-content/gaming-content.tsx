@@ -104,6 +104,46 @@ export function GamingContent() {
 
   const allGames = [
     {
+      href: "/gray-sprunki",
+      title: "Gray Sprunki",
+      description: "Create amazing beats with Gray Sprunki on IncrediboxSprunkiMod",
+      image: "https://959c13b.webp.li/public/gray-sprunki.jpg",
+      rating: 4.9,
+      players: 285000
+    },
+    {
+      href: "/sprunked",
+      title: "Sprunked",
+      description: "Experience the revolutionary music creation game that pushes the boundaries",
+      image: "https://959c13b.webp.li/public/sprunked.jpg",
+      rating: 4.9,
+      players: 280000
+    },
+    {
+      href: "/sprunki-brud",
+      title: "Sprunki Brud",
+      description: "Create amazing music with Sprunki Brud - The Latest Addition",
+      image: "https://959c13b.webp.li/public/sprunki-brud.jpg",
+      rating: 4.9,
+      players: 275000
+    },
+    {
+      href: "/game-incredibox",
+      title: "Game Incredibox",
+      description: "Play the amazing Incredibox game with unique musical mechanics",
+      image: "https://959c13b.webp.li/public/game-incredibox.jpg",
+      rating: 4.9,
+      players: 270000
+    },
+    {
+      href: "/colorbox-mustard",
+      title: "Colorbox Mustard",
+      description: "Experience colorful music creation with unique sound combinations",
+      image: "https://959c13b.webp.li/public/colorbox-mustard.jpg",
+      rating: 4.9,
+      players: 268000
+    },
+    {
       href: "/sprunki-mayonaise-2",
       title: "Sprunki Mayonaise 2",
       description: "The creamy musical adventure returns with new features",
@@ -198,14 +238,110 @@ export function GamingContent() {
       image: "https://959c13b.webp.li/public/sprunki-reverse.jpg",
       rating: 4.7,
       players: 218000
+    },
+    {
+      href: "/cool-as-ice",
+      title: "Cool As Ice",
+      description: "Create chill beats with this winter-themed music game",
+      image: "https://959c13b.webp.li/public/cool-as-ice.jpg",
+      rating: 4.7,
+      players: 215000
+    },
+    {
+      href: "/sprunki-alive",
+      title: "Sprunki Alive",
+      description: "Experience dynamic music creation with real-time sound generation",
+      image: "https://959c13b.webp.li/public/sprunki-alive.jpg",
+      rating: 4.7,
+      players: 212000
+    },
+    {
+      href: "/sprunki-modded",
+      title: "Sprunki Modded",
+      description: "Experience a unique take on the Sprunki series with new sounds",
+      image: "https://959c13b.webp.li/public/sprunki-modded.jpg",
+      rating: 4.7,
+      players: 208000
+    },
+    {
+      href: "/sprunki-phase-8",
+      title: "Sprunki Phase 8",
+      description: "Experience Phase eight, the next evolution of music creation",
+      image: "https://959c13b.webp.li/public/sprunki-phase-8.jpg",
+      rating: 4.7,
+      players: 205000
+    },
+    {
+      href: "/sprunki-christmas",
+      title: "Sprunki Christmas",
+      description: "Create festive music with holiday-themed sounds and visuals",
+      image: "https://959c13b.webp.li/public/sprunki-christmas.jpg",
+      rating: 4.7,
+      players: 202000
+    },
+    {
+      href: "/christmas-sprunki",
+      title: "Christmas Sprunki",
+      description: "Another take on holiday music creation with unique features",
+      image: "https://959c13b.webp.li/public/christmas-sprunki.jpg",
+      rating: 4.7,
+      players: 198000
+    },
+    {
+      href: "/sprunki-incredibox",
+      title: "Sprunki Incredibox",
+      description: "Experience the classic Incredibox style with a Sprunki twist",
+      image: "https://959c13b.webp.li/public/sprunki-incredibox.jpg",
+      rating: 4.7,
+      players: 195000
+    },
+    {
+      href: "/amazing-digital-circus",
+      title: "Amazing Digital Circus",
+      description: "Create circus-themed music with amazing digital effects",
+      image: "https://959c13b.webp.li/public/amazing-digital-circus.jpg",
+      rating: 4.7,
+      players: 192000
+    },
+    {
+      href: "/sprunki-smg4",
+      title: "Sprunki SMG4",
+      description: "Experience SMG4-style gameplay exclusively on IncrediboxSprunkiMod",
+      image: "https://959c13b.webp.li/public/sprunki-smg4.jpg",
+      rating: 4.7,
+      players: 188000
+    },
+    {
+      href: "/sprunki-retake",
+      title: "Sprunki Retake",
+      description: "A fresh take on the Sprunki series with new features",
+      image: "https://959c13b.webp.li/public/sprunki-retake.jpg",
+      rating: 4.7,
+      players: 185000
+    },
+    {
+      href: "/incredibox-sprunki-mod",
+      title: "Incredibox Sprunki Mod",
+      description: "The ultimate Incredibox mod with enhanced features",
+      image: "https://959c13b.webp.li/public/incredibox-sprunki-mod.jpg",
+      rating: 4.7,
+      players: 182000
+    },
+    {
+      href: "/neesterversal-v3-incredibox",
+      title: "Neesterversal V3 Incredibox",
+      description: "Experience the V3 version of Neesterversal Incredibox",
+      image: "https://959c13b.webp.li/public/neesterversal-v3.jpg",
+      rating: 4.7,
+      players: 178000
     }
   ]
 
   return (
-    <div className="container mx-auto px-2">
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-2 max-w-[1920px] mx-auto">
+    <div className="container mx-auto px-1">
+      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 2xl:grid-cols-10 gap-1">
         {allGames.map((game, index) => (
-          <div key={index} className="w-full">
+          <div key={index}>
             <FeaturedGameCard
               href={game.href}
               title={game.title}
