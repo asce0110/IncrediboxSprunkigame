@@ -33,7 +33,7 @@ const allGames = [
     href: "/game-incredibox",
     title: "Game Incredibox",
     description: "Play the amazing Incredibox game with unique musical mechanics",
-    image: "https://959c13b.webp.li/public/game-incredibox.jpg",
+    image: "https://959c13b.webp.li/public/corruptbox1-min.jpg",
     rating: 4.9,
     players: 270000
   },
@@ -145,7 +145,7 @@ const allGames = [
     href: "/cool-as-ice",
     title: "Cool As Ice",
     description: "Create chill beats with this winter-themed music game",
-    image: "https://959c13b.webp.li/public/cool-as-ice.jpg",
+    image: "https://959c13b.webp.li/public/coolasice.png",
     rating: 4.7,
     players: 215000
   },
@@ -225,7 +225,7 @@ const allGames = [
     href: "/incredibox-sprunki-mod",
     title: "Incredibox Sprunki Mod",
     description: "The ultimate Incredibox mod with enhanced features",
-    image: "https://959c13b.webp.li/public/incredibox-sprunki-mod.jpg",
+    image: "https://959c13b.webp.li/public/incredibox-characters.jpg",
     rating: 4.7,
     players: 182000
   },

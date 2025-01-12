@@ -20,7 +20,7 @@ const featuredGames = [
   {
     id: 2,
     title: 'Sprunki But 15,000,000 FunBots',
-    coverImage: 'https://959c13b.webp.li/public/sprunki-funbots.jpg',
+    coverImage: 'https://s.incrediboxsprunkimod.com/public/Sprunki-but-15000000-fun-bot-368x207.png',
     description: 'Experience musical mayhem with millions of AI bots',
     rating: 4.9,
     players: 258000,
