@@ -38,7 +38,7 @@ const featuredGames = [
   {
     id: 4,
     title: 'Sprunki Terror Phase 30',
-    coverImage: 'https://959c13b.webp.li/public/sprunki-terror-30.jpg',
+    coverImage: 'https://s.incrediboxsprunkimod.com/public/Sprunki-Terror-Phase-10-368x207.png',
     description: 'The ultimate horror music experience with terrifying beats',
     rating: 4.9,
     players: 248000,

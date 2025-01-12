@@ -55,20 +55,22 @@ export default function SprunkiTerrorPhase30Page() {
             <div className="relative bg-black/50 rounded-xl overflow-hidden shadow-lg shadow-[#2EE59D]/10" style={{ minHeight: '600px' }}>
               <iframe 
                 ref={iframeRef}
-                id="game_drop"
-                src="https://html-classic.itch.zone/html/12327519/index.html"
+                id="gameframe"
+                src="https://wowtbc.net/sprunkin/terror-phase30/index.html"
                 className="w-full"
                 style={{ 
                   border: 'none',
                   backgroundColor: 'black',
                   height: '600px',
-                  marginTop: '40px'
+                  marginTop: '40px',
+                  display: 'initial'
                 }}
-                frameBorder="0"
-                allowFullScreen
+                loading="lazy"
+                title="Sprunki Terror Phase 30"
+                width="100%"
+                height="100%"
                 scrolling="no"
-                allowTransparency
-                allow="autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; xr; cross-origin-isolated; web-share"
+                allow="autoplay; fullscreen; focus-without-user-activation *;"
               />
               <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black via-black/95 to-transparent z-10" />
             </div>

@@ -73,7 +73,7 @@ const allGames = [
     href: "/sprunki-terror-phase-30",
     title: "Sprunki Terror Phase 30",
     description: "The ultimate horror music experience with terrifying beats",
-    image: "https://959c13b.webp.li/public/sprunki-terror-30.jpg",
+    image: "https://s.incrediboxsprunkimod.com/public/Sprunki-Terror-Phase-10-368x207.png",
     rating: 4.9,
     players: 248000
   },

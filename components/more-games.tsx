@@ -98,12 +98,12 @@ const moreGames = [
   },
   {
     title: 'Sprunki in Ohio (Brainrot)',
-    image: 'https://959c13b.webp.li/public/sprunki-ohio.jpg',
+    image: 'https://s.incrediboxsprunkimod.com/public/Sprunki-in-Ohio-Brainrot-368x207.png',
     href: '/sprunki-in-ohio-brainrot'
   },
   {
     title: 'Sprunki Terror Phase 30',
-    image: 'https://959c13b.webp.li/public/sprunki-terror-30.jpg',
+    image: 'https://s.incrediboxsprunkimod.com/public/Sprunki-Terror-Phase-10-368x207.png',
     href: '/sprunki-terror-phase-30'
   },
   {
