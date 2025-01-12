@@ -30,8 +30,8 @@ export function SimpleGameCard({ href, title, image, compact = false }: SimpleGa
           </div>
           
           {/* Title */}
-          <div className="p-3">
-            <h3 className="font-medium text-white text-sm sm:text-base line-clamp-2 group-hover:text-[#2EE59D] transition-colors text-center">
+          <div className="p-4">
+            <h3 className="font-medium text-white text-base sm:text-lg md:text-xl line-clamp-2 group-hover:text-[#2EE59D] transition-colors text-center">
               {title}
             </h3>
           </div>
