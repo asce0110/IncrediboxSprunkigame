@@ -57,7 +57,7 @@ const allGames = [
     href: "/sprunki-but-15000000-funbots",
     title: "Sprunki But 15,000,000 FunBots",
     description: "Experience musical mayhem with millions of AI bots",
-    image: "https://959c13b.webp.li/public/sprunki-funbots.jpg",
+    image: "https://s.incrediboxsprunkimod.com/public/Sprunki-but-15000000-fun-bot-368x207.png",
     rating: 4.9,
     players: 258000
   },
