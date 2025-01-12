@@ -202,10 +202,10 @@ export function GamingContent() {
   ]
 
   return (
-    <div className="relative px-4 sm:px-6 md:px-8">
-      <Slider {...settings}>
+    <div className="relative px-2 sm:px-3 md:px-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2 sm:gap-3">
         {allGames.map((game, index) => (
-          <div key={index} className="px-1 sm:px-2 md:px-3">
+          <div key={index}>
             <FeaturedGameCard
               href={game.href}
               title={game.title}
@@ -216,7 +216,7 @@ export function GamingContent() {
             />
           </div>
         ))}
-      </Slider>
+      </div>
     </div>
   )
 }
