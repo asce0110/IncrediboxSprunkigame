@@ -65,36 +65,36 @@ export function GamingContent() {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 6,
     slidesToScroll: 1,
     nextArrow: <CustomArrow direction="right" />,
     prevArrow: <CustomArrow direction="left" />,
     responsive: [
       {
+        breakpoint: 1536,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 1,
+        }
+      },
+      {
         breakpoint: 1280,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 4,
           slidesToScroll: 1,
         }
       },
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 1,
         }
       },
       {
         breakpoint: 640,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 1,
           arrows: false
         }
@@ -337,21 +337,57 @@ export function GamingContent() {
     }
   ]
 
+  // 合并所有游戏并去重
+  const combinedGames = [
+    ...allGames,
+    ...featuredGames.map(game => ({
+      href: game.href,
+      title: game.title,
+      description: game.description,
+      image: game.coverImage,
+      rating: game.rating,
+      players: game.players
+    }))
+  ].filter((game, index, self) => 
+    index === self.findIndex((g) => g.href === game.href)
+  ).sort((a, b) => b.players - a.players)
+
   return (
-    <div className="container mx-auto px-1">
-      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 2xl:grid-cols-10 gap-1">
-        {allGames.map((game, index) => (
-          <div key={index}>
-            <FeaturedGameCard
-              href={game.href}
-              title={game.title}
-              description={game.description}
-              image={game.image}
-              rating={game.rating}
-              players={game.players}
-            />
-          </div>
-        ))}
+    <div className="space-y-4">
+      {/* Featured Games Slider */}
+      <div className="relative px-1">
+        <Slider {...settings}>
+          {featuredGames.map((game, index) => (
+            <div key={index} className="px-0.5">
+              <FeaturedGameCard
+                href={game.href}
+                title={game.title}
+                description={game.description}
+                image={game.coverImage}
+                rating={game.rating}
+                players={game.players}
+              />
+            </div>
+          ))}
+        </Slider>
+      </div>
+
+      {/* All Games Grid */}
+      <div className="container mx-auto px-1">
+        <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10 xl:grid-cols-12 2xl:grid-cols-14 gap-0.5">
+          {combinedGames.map((game, index) => (
+            <div key={index}>
+              <FeaturedGameCard
+                href={game.href}
+                title={game.title}
+                description={game.description}
+                image={game.image}
+                rating={game.rating}
+                players={game.players}
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   )
