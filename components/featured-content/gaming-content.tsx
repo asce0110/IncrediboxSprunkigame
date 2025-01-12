@@ -71,14 +71,14 @@ export function GamingContent() {
     prevArrow: <CustomArrow direction="left" />,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1280,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
         }
       },
       {
-        breakpoint: 768,
+        breakpoint: 1024,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
@@ -87,8 +87,16 @@ export function GamingContent() {
       {
         breakpoint: 640,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          arrows: false
         }
       }
     ]
@@ -128,68 +136,76 @@ export function GamingContent() {
       players: 248000
     },
     {
-      href: "/sprinkle-parasite",
-      title: "Sprinkle Parasite",
-      description: "Create infectious music that evolves and spreads",
-      image: "https://959c13b.webp.li/public/sprinkle-parasite.jpg",
-      rating: 4.9,
-      players: 244000
-    },
-    {
-      href: "/sprunki-terror-phase-10",
-      title: "Sprunki Terror Phase 10",
-      description: "Classic horror reimagined with modern mechanics",
-      image: "https://959c13b.webp.li/public/sprunki-terror-10.jpg",
+      href: "/sprunki-titanic-cat-gang-edition",
+      title: "Sprunki Titanic Cat Gang Edition",
+      description: "Join the feline musical crew on their epic voyage",
+      image: "https://959c13b.webp.li/public/sprunki-titanic.jpg",
       rating: 4.8,
-      players: 237000
+      players: 242000
     },
     {
-      href: "/incrediboxsprunkimod",
-      title: "Incredibox Sprunki Mod",
-      description: "Create your own beats with this amazing music game",
-      image: "https://959c13b.webp.li/public/incredibox-characters.jpg",
-      rating: 4.9,
-      players: 198000
-    },
-    {
-      href: "/cool-as-ice",
-      title: "Cool As Ice",
-      description: "Create chill beats with this winter-themed Incredibox mod",
-      image: "https://959c13b.webp.li/public/coolasice.png",
+      href: "/sprunki-but-relish",
+      title: "Sprunki But Relish",
+      description: "A tangy twist on the classic Sprunki experience",
+      image: "https://959c13b.webp.li/public/sprunki-relish.jpg",
       rating: 4.8,
-      players: 156000
+      players: 238000
     },
     {
-      href: "/sprunki-smg4",
-      title: "Sprunki SMG4",
-      description: "Experience the unique SMG4-style gameplay exclusively on IncrediboxSprunkiMod",
-      image: "https://959c13b.webp.li/public/sprunki-smg4.jpg",
-      rating: 4.9,
-      players: 230000
+      href: "/sprunki-definitive-phase-5",
+      title: "Sprunki Definitive Phase 5",
+      description: "The ultimate refined version of the Sprunki series",
+      image: "https://959c13b.webp.li/public/sprunki-phase-5.jpg",
+      rating: 4.8,
+      players: 235000
     },
     {
-      href: "/amazing-digital-circus",
-      title: "Amazing Digital Circus",
-      description: "Experience the magic of digital circus with stunning visuals",
-      image: "https://959c13b.webp.li/public/amazing-digital-circus.jpg",
-      rating: 4.9,
+      href: "/sprunki-cute-time",
+      title: "Sprunki Cute Time",
+      description: "Adorable musical adventures with kawaii elements",
+      image: "https://959c13b.webp.li/public/sprunki-cute.jpg",
+      rating: 4.8,
+      players: 232000
+    },
+    {
+      href: "/sprunki-the-sun",
+      title: "Sprunki The Sun",
+      description: "Create blazing hot beats in this solar-powered edition",
+      image: "https://959c13b.webp.li/public/sprunki-sun.jpg",
+      rating: 4.8,
+      players: 228000
+    },
+    {
+      href: "/kino-sprunked-2-0-mini-remake",
+      title: "Kino Sprunked 2.0 Mini Remake",
+      description: "A cinematic musical experience reimagined",
+      image: "https://959c13b.webp.li/public/kino-sprunked.jpg",
+      rating: 4.7,
       players: 225000
     },
-    ...featuredGames.map(game => ({
-      href: game.href,
-      title: game.title,
-      description: game.description,
-      image: game.coverImage,
-      rating: game.rating,
-      players: game.players
-    }))
+    {
+      href: "/fiddlesprunkis",
+      title: "Fiddlesprunkis",
+      description: "A folk-inspired musical journey with a Sprunki twist",
+      image: "https://959c13b.webp.li/public/fiddlesprunkis.jpg",
+      rating: 4.7,
+      players: 222000
+    },
+    {
+      href: "/sprunki-phase-3-reverse",
+      title: "Sprunki Phase 3 Reverse",
+      description: "Experience classic Sprunki beats in reverse",
+      image: "https://959c13b.webp.li/public/sprunki-reverse.jpg",
+      rating: 4.7,
+      players: 218000
+    }
   ]
 
   return (
-    <div className="relative px-8">
+    <div className="relative px-4 sm:px-6 md:px-8">
       <Slider {...settings}>
         {allGames.map((game, index) => (
-          <div key={index} className="px-3">
+          <div key={index} className="px-1 sm:px-2 md:px-3">
             <FeaturedGameCard
               href={game.href}
               title={game.title}
