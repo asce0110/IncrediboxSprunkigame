@@ -202,10 +202,10 @@ export function GamingContent() {
   ]
 
   return (
-    <div className="relative px-2 sm:px-3 md:px-4">
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2 sm:gap-3">
+    <div className="container mx-auto px-2">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-2 max-w-[1920px] mx-auto">
         {allGames.map((game, index) => (
-          <div key={index}>
+          <div key={index} className="w-full">
             <FeaturedGameCard
               href={game.href}
               title={game.title}
