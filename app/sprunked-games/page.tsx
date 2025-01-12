@@ -49,7 +49,7 @@ const allGames = [
     href: "/sprunki-mayonaise-2",
     title: "Sprunki Mayonaise 2",
     description: "The creamy musical adventure returns with new features",
-    image: "https://959c13b.webp.li/public/sprunki-mayo-2.jpg",
+    image: "https://s.incrediboxsprunkimod.com/public/Sprunki-Mayonaise-2-368x207.png",
     rating: 4.9,
     players: 265000
   },
