@@ -32,15 +32,15 @@ export function FeaturedGameCard({
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
         </div>
         <div className="p-3">
-          <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#2EE59D] truncate mb-2">{title}</h3>
-          <p className="text-lg sm:text-xl text-gray-400 line-clamp-1 min-h-[1.5em] opacity-80">{description}</p>
-          <div className="flex items-center justify-between text-lg mt-2">
-            <div className="flex items-center gap-2">
-              <Star className="w-6 h-6 text-yellow-400 fill-yellow-400" />
+          <h3 className="text-base sm:text-lg font-semibold text-[#2EE59D] truncate mb-1">{title}</h3>
+          <p className="text-sm text-gray-400 line-clamp-1 min-h-[1.5em] opacity-80">{description}</p>
+          <div className="flex items-center justify-between text-sm mt-1">
+            <div className="flex items-center gap-1">
+              <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
               <span className="text-yellow-400">{rating}</span>
             </div>
-            <div className="flex items-center gap-2">
-              <Users className="w-6 h-6 text-blue-400" />
+            <div className="flex items-center gap-1">
+              <Users className="w-4 h-4 text-blue-400" />
               <span className="text-blue-400">{players >= 1000 ? `${(players/1000).toFixed(1)}k` : players}</span>
             </div>
           </div>

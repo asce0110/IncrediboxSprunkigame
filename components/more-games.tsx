@@ -79,7 +79,7 @@ const moreGames = [
   {
     title: 'Incredibox Sprunki Mod',
     image: 'https://959c13b.webp.li/public/incredibox-characters.jpg',
-    href: '/incrediboxsprunkimod'
+    href: '/incredibox-sprunki-mod'
   },
   {
     title: 'Neesterversal V3 Incredibox',
