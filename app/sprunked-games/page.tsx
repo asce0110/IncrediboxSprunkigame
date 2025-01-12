@@ -88,10 +88,10 @@ const allGames = [
   {
     href: "/sprunki-but-relish",
     title: "Sprunki But Relish",
-    description: "A tangy twist on the classic Sprunki experience",
-    image: "https://959c13b.webp.li/public/sprunki-relish.jpg",
+    description: "Experience the zesty fusion of music and condiments",
+    image: "https://s.incrediboxsprunkimod.com/public/RELISH-BUT-SPRUNKI-368x207.png",
     rating: 4.8,
-    players: 238000
+    players: 225000
   },
   {
     href: "/sprunki-definitive-phase-5",

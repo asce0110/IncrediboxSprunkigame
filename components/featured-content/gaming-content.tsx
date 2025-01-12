@@ -119,6 +119,14 @@ const allGames = [
     rating: 4.8,
     players: 225000
   },
+  {
+    href: '/sprunki-the-sun',
+    title: 'Sprunki The Sun',
+    description: 'Create dazzling musical compositions with the power of the sun',
+    image: 'https://s.incrediboxsprunkimod.com/public/Sprunki-the-Sun-368x207.png',
+    rating: 4.7,
+    players: 215000
+  },
   // ... 复制其他游戏数据 ...
 ]
 
