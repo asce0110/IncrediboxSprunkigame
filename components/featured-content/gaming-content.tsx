@@ -95,6 +95,14 @@ const allGames = [
     rating: 4.9,
     players: 265000
   },
+  {
+    href: "/sprunki-titanic-cat-gang-edition",
+    title: "Sprunki Titanic Cat Gang Edition",
+    description: "Join the feline musical crew on their epic voyage",
+    image: "https://s.incrediboxsprunkimod.com/public/Sprunki-Titanic-Cat-Gang-Edition-368x207.png",
+    rating: 4.8,
+    players: 242000
+  },
   // ... 复制其他游戏数据 ...
 ]
 

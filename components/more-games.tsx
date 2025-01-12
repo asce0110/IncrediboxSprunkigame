@@ -108,7 +108,7 @@ const moreGames = [
   },
   {
     title: 'Sprunki Titanic Cat Gang Edition',
-    image: 'https://959c13b.webp.li/public/sprunki-titanic.jpg',
+    image: 'https://s.incrediboxsprunkimod.com/public/Sprunki-Titanic-Cat-Gang-Edition-368x207.png',
     href: '/sprunki-titanic-cat-gang-edition'
   },
   {
