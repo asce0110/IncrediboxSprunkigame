@@ -130,6 +130,11 @@ const moreGames = [
     title: 'Sprunki The Sun',
     image: 'https://959c13b.webp.li/public/sprunki-sun.jpg',
     href: '/sprunki-the-sun'
+  },
+  {
+    href: '/sprunki-phase-3-reverse',
+    title: 'Sprunki Phase 3 Reverse',
+    image: 'https://s.incrediboxsprunkimod.com/public/Sprunki-Phase-3-Reverse-368x207.png'
   }
 ]
 

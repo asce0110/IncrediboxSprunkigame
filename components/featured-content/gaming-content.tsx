@@ -103,6 +103,14 @@ const allGames = [
     rating: 4.8,
     players: 242000
   },
+  {
+    href: "/sprunki-phase-3-reverse",
+    title: "Sprunki Phase 3 Reverse",
+    description: "Experience classic Sprunki beats in reverse",
+    image: "https://s.incrediboxsprunkimod.com/public/Sprunki-Phase-3-Reverse-368x207.png",
+    rating: 4.7,
+    players: 218000
+  },
   // ... 复制其他游戏数据 ...
 ]
 

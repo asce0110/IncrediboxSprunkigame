@@ -81,7 +81,7 @@ const allGames = [
     href: "/sprunki-titanic-cat-gang-edition",
     title: "Sprunki Titanic Cat Gang Edition",
     description: "Join the feline musical crew on their epic voyage",
-    image: "https://959c13b.webp.li/public/sprunki-titanic.jpg",
+    image: "https://s.incrediboxsprunkimod.com/public/Sprunki-Titanic-Cat-Gang-Edition-368x207.png",
     rating: 4.8,
     players: 242000
   },
@@ -137,7 +137,7 @@ const allGames = [
     href: "/sprunki-phase-3-reverse",
     title: "Sprunki Phase 3 Reverse",
     description: "Experience classic Sprunki beats in reverse",
-    image: "https://959c13b.webp.li/public/sprunki-reverse.jpg",
+    image: "https://s.incrediboxsprunkimod.com/public/Sprunki-Phase-3-Reverse-368x207.png",
     rating: 4.7,
     players: 218000
   },
