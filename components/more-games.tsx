@@ -88,7 +88,7 @@ const moreGames = [
   },
   {
     title: 'Sprunki Mayonaise 2',
-    image: 'https://959c13b.webp.li/public/sprunki-mayo-2.jpg',
+    image: 'https://s.incrediboxsprunkimod.com/public/Sprunki-Mayonaise-2-368x207.png',
     href: '/sprunki-mayonaise-2'
   },
   {
