@@ -149,51 +149,21 @@ export function GamingContent() {
   }
 
   return (
-    <div className="space-y-12">
-      {/* Featured Games Slider */}
-      <div className="relative px-4">
-        <Slider {...settings}>
-          {featuredGames.map((game, index) => (
-            <div key={index} className="px-2">
-              <FeaturedGameCard
-                href={game.href}
-                title={game.title}
-                description={game.description}
-                image={game.coverImage}
-                rating={game.rating}
-                players={game.players}
-              />
-            </div>
-          ))}
-        </Slider>
-      </div>
-
-      {/* More Games Grid */}
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center mb-6">
-          <h2 className="text-2xl font-bold text-[#2EE59D]">More Sprunked Games</h2>
-          <Link 
-            href="/sprunked-games" 
-            className="text-sm text-[#2EE59D] hover:underline"
-          >
-            View All Games
-          </Link>
-        </div>
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 2xl:grid-cols-10 gap-1">
-          {allGames.slice(0, 20).map((game, index) => (
-            <div key={index}>
-              <FeaturedGameCard
-                href={game.href}
-                title={game.title}
-                description={game.description}
-                image={game.image}
-                rating={game.rating}
-                players={game.players}
-              />
-            </div>
-          ))}
-        </div>
-      </div>
+    <div className="relative px-4">
+      <Slider {...settings}>
+        {featuredGames.map((game, index) => (
+          <div key={index} className="px-2">
+            <FeaturedGameCard
+              href={game.href}
+              title={game.title}
+              description={game.description}
+              image={game.coverImage}
+              rating={game.rating}
+              players={game.players}
+            />
+          </div>
+        ))}
+      </Slider>
     </div>
   )
 }
