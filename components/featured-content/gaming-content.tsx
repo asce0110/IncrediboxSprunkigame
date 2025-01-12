@@ -11,7 +11,7 @@ const featuredGames = [
   {
     id: 1,
     title: 'Sprunki Mayonaise 2',
-    coverImage: 'https://959c13b.webp.li/public/sprunki-mayo-2.jpg',
+    coverImage: 'https://s.incrediboxsprunkimod.com/public/Sprunki-Mayonaise-2-368x207.png',
     description: 'The creamy musical adventure returns with new features',
     rating: 4.9,
     players: 265000,
