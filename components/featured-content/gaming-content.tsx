@@ -29,7 +29,7 @@ const featuredGames = [
   {
     id: 3,
     title: 'Sprunki in Ohio (Brainrot)',
-    coverImage: 'https://959c13b.webp.li/public/sprunki-ohio.jpg',
+    coverImage: 'https://s.incrediboxsprunkimod.com/public/Sprunki-in-Ohio-Brainrot-368x207.png',
     description: 'Experience the wild and chaotic fusion of Sprunki meets Ohio',
     rating: 4.9,
     players: 255000,

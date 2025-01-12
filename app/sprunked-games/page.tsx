@@ -65,7 +65,7 @@ const allGames = [
     href: "/sprunki-in-ohio-brainrot",
     title: "Sprunki in Ohio (Brainrot)",
     description: "Experience the wild and chaotic fusion of Sprunki meets Ohio",
-    image: "https://959c13b.webp.li/public/sprunki-ohio.jpg",
+    image: "https://s.incrediboxsprunkimod.com/public/Sprunki-in-Ohio-Brainrot-368x207.png",
     rating: 4.9,
     players: 255000
   },
