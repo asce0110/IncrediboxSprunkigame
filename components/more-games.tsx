@@ -85,6 +85,51 @@ const moreGames = [
     title: 'Neesterversal V3 Incredibox',
     image: 'https://959c13b.webp.li/public/neesterversal-v3.jpg',
     href: '/neesterversal-v3-incredibox'
+  },
+  {
+    title: 'Sprunki Mayonaise 2',
+    image: 'https://959c13b.webp.li/public/sprunki-mayo-2.jpg',
+    href: '/sprunki-mayonaise-2'
+  },
+  {
+    title: 'Sprunki But 15,000,000 FunBots',
+    image: 'https://959c13b.webp.li/public/sprunki-funbots.jpg',
+    href: '/sprunki-but-15000000-funbots'
+  },
+  {
+    title: 'Sprunki in Ohio (Brainrot)',
+    image: 'https://959c13b.webp.li/public/sprunki-ohio.jpg',
+    href: '/sprunki-in-ohio-brainrot'
+  },
+  {
+    title: 'Sprunki Terror Phase 30',
+    image: 'https://959c13b.webp.li/public/sprunki-terror-30.jpg',
+    href: '/sprunki-terror-phase-30'
+  },
+  {
+    title: 'Sprunki Titanic Cat Gang Edition',
+    image: 'https://959c13b.webp.li/public/sprunki-titanic.jpg',
+    href: '/sprunki-titanic-cat-gang-edition'
+  },
+  {
+    title: 'Sprunki But Relish',
+    image: 'https://959c13b.webp.li/public/sprunki-relish.jpg',
+    href: '/sprunki-but-relish'
+  },
+  {
+    title: 'Sprunki Definitive Phase 5',
+    image: 'https://959c13b.webp.li/public/sprunki-phase-5.jpg',
+    href: '/sprunki-definitive-phase-5'
+  },
+  {
+    title: 'Sprunki Cute Time',
+    image: 'https://959c13b.webp.li/public/sprunki-cute.jpg',
+    href: '/sprunki-cute-time'
+  },
+  {
+    title: 'Sprunki The Sun',
+    image: 'https://959c13b.webp.li/public/sprunki-sun.jpg',
+    href: '/sprunki-the-sun'
   }
 ]
 
@@ -95,7 +140,7 @@ export function MoreGames() {
         <h2 className="text-2xl font-semibold text-[#2EE59D]">More Sprunked Games</h2>
       </div>
       <div className="p-3">
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-2">
           {moreGames.map((game, index) => (
             <SimpleGameCard
               key={index}
