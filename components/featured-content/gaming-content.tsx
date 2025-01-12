@@ -5,6 +5,7 @@ import Slider from 'react-slick'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+import Link from 'next/link'
 
 const featuredGames = [
   {
@@ -43,6 +44,58 @@ const featuredGames = [
     players: 248000,
     href: '/sprunki-terror-phase-30'
   }
+]
+
+const allGames = [
+  {
+    href: "/gray-sprunki",
+    title: "Gray Sprunki",
+    description: "Create amazing beats with Gray Sprunki on IncrediboxSprunkiMod",
+    image: "https://959c13b.webp.li/public/gray-sprunki.jpg",
+    rating: 4.9,
+    players: 285000
+  },
+  {
+    href: "/sprunked",
+    title: "Sprunked",
+    description: "Experience the revolutionary music creation game that pushes the boundaries",
+    image: "https://959c13b.webp.li/public/sprunked.jpg",
+    rating: 4.9,
+    players: 280000
+  },
+  {
+    href: "/sprunki-brud",
+    title: "Sprunki Brud",
+    description: "Create amazing music with Sprunki Brud - The Latest Addition",
+    image: "https://959c13b.webp.li/public/sprunki-brud.jpg",
+    rating: 4.9,
+    players: 275000
+  },
+  {
+    href: "/game-incredibox",
+    title: "Game Incredibox",
+    description: "Play the amazing Incredibox game with unique musical mechanics",
+    image: "https://959c13b.webp.li/public/game-incredibox.jpg",
+    rating: 4.9,
+    players: 270000
+  },
+  {
+    href: "/colorbox-mustard",
+    title: "Colorbox Mustard",
+    description: "Experience colorful music creation with unique sound combinations",
+    image: "https://959c13b.webp.li/public/colorbox-mustard.jpg",
+    rating: 4.9,
+    players: 268000
+  },
+  {
+    href: "/sprunki-mayonaise-2",
+    title: "Sprunki Mayonaise 2",
+    description: "The creamy musical adventure returns with new features",
+    image: "https://959c13b.webp.li/public/sprunki-mayo-2.jpg",
+    rating: 4.9,
+    players: 265000
+  },
+  // ... 复制其他游戏数据 ...
 ]
 
 const CustomArrow = ({ direction, onClick }: { direction: 'left' | 'right', onClick?: () => void }) => (
@@ -96,21 +149,51 @@ export function GamingContent() {
   }
 
   return (
-    <div className="relative px-4">
-      <Slider {...settings}>
-        {featuredGames.map((game, index) => (
-          <div key={index} className="px-2">
-            <FeaturedGameCard
-              href={game.href}
-              title={game.title}
-              description={game.description}
-              image={game.coverImage}
-              rating={game.rating}
-              players={game.players}
-            />
-          </div>
-        ))}
-      </Slider>
+    <div className="space-y-12">
+      {/* Featured Games Slider */}
+      <div className="relative px-4">
+        <Slider {...settings}>
+          {featuredGames.map((game, index) => (
+            <div key={index} className="px-2">
+              <FeaturedGameCard
+                href={game.href}
+                title={game.title}
+                description={game.description}
+                image={game.coverImage}
+                rating={game.rating}
+                players={game.players}
+              />
+            </div>
+          ))}
+        </Slider>
+      </div>
+
+      {/* More Games Grid */}
+      <div className="container mx-auto px-4">
+        <div className="flex justify-between items-center mb-6">
+          <h2 className="text-2xl font-bold text-[#2EE59D]">More Sprunked Games</h2>
+          <Link 
+            href="/sprunked-games" 
+            className="text-sm text-[#2EE59D] hover:underline"
+          >
+            View All Games
+          </Link>
+        </div>
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 2xl:grid-cols-10 gap-1">
+          {allGames.slice(0, 20).map((game, index) => (
+            <div key={index}>
+              <FeaturedGameCard
+                href={game.href}
+                title={game.title}
+                description={game.description}
+                image={game.image}
+                rating={game.rating}
+                players={game.players}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   )
 }
