@@ -135,6 +135,11 @@ const moreGames = [
     href: '/sprunki-phase-3-reverse',
     title: 'Sprunki Phase 3 Reverse',
     image: 'https://s.incrediboxsprunkimod.com/public/Sprunki-Phase-3-Reverse-368x207.png'
+  },
+  {
+    href: '/sprunki-but-relish',
+    title: 'Sprunki But Relish',
+    image: 'https://s.incrediboxsprunkimod.com/public/RELISH-BUT-SPRUNKI-368x207.png'
   }
 ]
 

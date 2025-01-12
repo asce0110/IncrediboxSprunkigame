@@ -111,6 +111,14 @@ const allGames = [
     rating: 4.7,
     players: 218000
   },
+  {
+    href: '/sprunki-but-relish',
+    title: 'Sprunki But Relish',
+    description: 'Experience the zesty fusion of music and condiments',
+    image: 'https://s.incrediboxsprunkimod.com/public/RELISH-BUT-SPRUNKI-368x207.png',
+    rating: 4.8,
+    players: 225000
+  },
   // ... 复制其他游戏数据 ...
 ]
 

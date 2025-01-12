@@ -42,10 +42,10 @@ export default function SprunkiPhase3ReversePage() {
 
             <div>
               <h1 className="text-4xl font-bold text-[#2EE59D] mb-2">
-                Sprunki Phase 3 Reverse
+                Sprunki Phase 3 Reverse - Experience Music in Reverse
               </h1>
               <p className="text-gray-400 text-lg">
-                Experience classic Sprunki beats in reverse
+                Create amazing reversed beats with Sprunki Phase 3 Reverse on IncrediboxSprunkiMod
               </p>
             </div>
           </div>
@@ -69,8 +69,73 @@ export default function SprunkiPhase3ReversePage() {
           <div className="mb-8">
             <h2 className="text-2xl font-bold text-[#2EE59D] mb-4">About Sprunki Phase 3 Reverse</h2>
             <p className="text-gray-300 mb-4">
-              Experience the classic Sprunki Phase 3 in an entirely new way with this reverse edition. This unique take on the beloved game lets you create amazing beats by playing everything backwards, offering a fresh perspective on familiar sounds.
+              Sprunki Phase 3 Reverse is an innovative music creation game that takes the beloved Sprunki Phase 3 experience and flips it on its head. This unique version lets you create amazing beats by playing everything backwards, offering a fresh perspective on familiar sounds. With its intuitive interface and reversed audio mechanics, Sprunki Phase 3 Reverse brings a whole new dimension to music creation.
             </p>
+            <p className="text-gray-300 mb-4">
+              Experience the magic of reverse music creation in this special edition of Sprunki Phase 3. Create mesmerizing beats, discover new sound combinations, and explore the fascinating world of reversed audio patterns. Whether you're a fan of the original Sprunki Phase 3 or new to the series, this reverse edition offers endless possibilities for musical creativity.
+            </p>
+          </div>
+
+          {/* Features Section */}
+          <div className="mb-8">
+            <h2 className="text-2xl font-bold text-[#2EE59D] mb-4">Key Features of Sprunki Phase 3 Reverse</h2>
+            <ul className="list-disc list-inside text-gray-300 space-y-2">
+              <li>Reversed audio mechanics for unique sound creation</li>
+              <li>Classic Sprunki Phase 3 sounds reimagined in reverse</li>
+              <li>Intuitive drag-and-drop interface</li>
+              <li>Multiple music creation modes</li>
+              <li>Save and share your reversed musical creations</li>
+              <li>Enhanced visual effects and animations</li>
+            </ul>
+          </div>
+
+          {/* FAQ Section */}
+          <div className="mb-8">
+            <h2 className="text-2xl font-bold text-[#2EE59D] mb-4">Frequently Asked Questions</h2>
+            
+            <div className="space-y-4">
+              <div>
+                <h3 className="text-xl font-semibold text-[#2EE59D] mb-2">What makes Sprunki Phase 3 Reverse different from the original?</h3>
+                <p className="text-gray-300">
+                  Sprunki Phase 3 Reverse takes all the beloved sounds and mechanics from the original game and plays them in reverse, creating a completely new musical experience. This reversed approach allows for unique sound combinations and creative possibilities not found in the standard version.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-[#2EE59D] mb-2">Do I need to play the original Sprunki Phase 3 first?</h3>
+                <p className="text-gray-300">
+                  No, you don't need prior experience with Sprunki Phase 3. While fans of the original will appreciate the reversed versions of familiar sounds, the game is designed to be enjoyable for both newcomers and experienced players.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-[#2EE59D] mb-2">How do the reversed mechanics work?</h3>
+                <p className="text-gray-300">
+                  The game takes the original Sprunki Phase 3 sound samples and plays them in reverse. This creates unique sonic textures and allows you to compose music with an interesting twist. The drag-and-drop interface remains intuitive, making it easy to experiment with reversed sounds.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-[#2EE59D] mb-2">Can I save my reversed music creations?</h3>
+                <p className="text-gray-300">
+                  Yes, Sprunki Phase 3 Reverse allows you to save your musical compositions. You can also share your creations with other players, building a community around this unique musical experience.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-[#2EE59D] mb-2">What are the system requirements?</h3>
+                <p className="text-gray-300">
+                  Sprunki Phase 3 Reverse runs smoothly in most modern web browsers. For the best experience, we recommend using an updated version of Chrome, Firefox, or Safari with a stable internet connection.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-[#2EE59D] mb-2">Are there different music styles available?</h3>
+                <p className="text-gray-300">
+                  Yes, Sprunki Phase 3 Reverse includes various musical styles and sound sets, all played in reverse. This variety allows you to create diverse musical compositions across different genres and styles.
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Comments Section */}
