@@ -105,7 +105,7 @@ const allGames = [
     href: "/sprunki-definitive-phase-5",
     title: "Sprunki Definitive Phase 5",
     description: "The ultimate refined version of the Sprunki series",
-    image: "https://959c13b.webp.li/public/sprunki-phase-5.jpg",
+    image: "https://s.incrediboxsprunkimod.com/public/Sprunki-Definitive-Phase-5-368x207.png",
     rating: 4.8,
     players: 235000
   },

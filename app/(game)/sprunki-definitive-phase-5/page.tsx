@@ -4,6 +4,7 @@ import { useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
 import { Comments } from '@/components/comments'
+import Head from 'next/head'
 
 export default function SprunckiDefinitivePhase5Page() {
   const iframeRef = useRef<HTMLIFrameElement>(null)
@@ -26,6 +27,24 @@ export default function SprunckiDefinitivePhase5Page() {
 
   return (
     <>
+      <Head>
+        <title>Sprunki Definitive Phase 5 - The Ultimate Music Creation Experience</title>
+        <meta name="description" content="Play Sprunki Definitive Phase 5, the ultimate refined version of the Sprunki series. Experience enhanced sound libraries, improved mechanics, and new features in this definitive music creation game." />
+        <meta name="keywords" content="Sprunki Definitive Phase 5, music creation game, rhythm game, Sprunki series, online game, browser game" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Sprunki Definitive Phase 5 - The Ultimate Music Creation Experience" />
+        <meta property="og:description" content="Play Sprunki Definitive Phase 5, the ultimate refined version of the Sprunki series. Experience enhanced sound libraries, improved mechanics, and new features in this definitive music creation game." />
+        <meta property="og:image" content="https://s.incrediboxsprunkimod.com/public/sprunki-definitive-phase-5.jpg" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Sprunki Definitive Phase 5 - The Ultimate Music Creation Experience" />
+        <meta name="twitter:description" content="Play Sprunki Definitive Phase 5, the ultimate refined version of the Sprunki series. Experience enhanced sound libraries, improved mechanics, and new features in this definitive music creation game." />
+        <meta name="twitter:image" content="https://s.incrediboxsprunkimod.com/public/sprunki-definitive-phase-5.jpg" />
+      </Head>
+
       <div className="container mx-auto px-4 py-8">
         <div className="space-y-6">
           {/* 返回按钮和标题 */}
@@ -45,7 +64,7 @@ export default function SprunckiDefinitivePhase5Page() {
             <iframe 
               ref={iframeRef}
               id="game_drop"
-              src="https://html-classic.itch.zone/html/12327519/index.html"
+              src="https://wowtbc.net/sprunkin/definitive-phase5/index.html"
               className="w-full"
               style={{ 
                 border: 'none',
@@ -53,6 +72,8 @@ export default function SprunckiDefinitivePhase5Page() {
                 height: '600px',
                 marginTop: '40px'
               }}
+              title="Sprunki Definitive Phase 5"
+              loading="lazy"
               frameBorder="0"
               allowFullScreen
               scrolling="no"
