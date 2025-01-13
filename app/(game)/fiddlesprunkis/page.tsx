@@ -3,6 +3,8 @@
 import { ArrowLeft } from 'lucide-react'
 import Link from 'next/link'
 import { useRef, useEffect } from 'react'
+import Head from 'next/head'
+import { Comments } from '@/components/comments'
 
 export default function FiddleSprunkisPage() {
   const iframeRef = useRef<HTMLIFrameElement>(null)
@@ -25,6 +27,25 @@ export default function FiddleSprunkisPage() {
 
   return (
     <>
+      <Head>
+        <title>FiddleSprunkis - Folk-Inspired Music Creation Game | Play Online Free</title>
+        <meta name="description" content="Play FiddleSprunkis online - A folk-inspired musical journey with a Sprunki twist. Create unique beats, mix folk sounds, and compose your own musical masterpieces in this engaging interactive experience." />
+        <meta name="keywords" content="FiddleSprunkis, folk music game, music creation, Sprunki game, online music maker, folk beats" />
+        
+        {/* Open Graph / Social Media Meta Tags */}
+        <meta property="og:title" content="FiddleSprunkis - Create Your Own Folk-Inspired Music Online" />
+        <meta property="og:description" content="A folk-inspired musical journey with a Sprunki twist. Create and mix unique folk beats in this engaging music creation game." />
+        <meta property="og:image" content="https://sprunkin.com/wp-content/uploads/2025/01/FiddleSprunkis-368x207.png" />
+        <meta property="og:url" content="https://incrediboxsprunkimod.com/fiddlesprunkis" />
+        <meta property="og:type" content="website" />
+        
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="FiddleSprunkis - Folk-Inspired Music Creation Game" />
+        <meta name="twitter:description" content="Create and mix unique folk beats in this engaging music creation game. A folk-inspired musical journey with a Sprunki twist." />
+        <meta name="twitter:image" content="https://sprunkin.com/wp-content/uploads/2025/01/FiddleSprunkis-368x207.png" />
+      </Head>
+
       <div className="min-h-screen bg-black/90">
         <div className="container mx-auto py-4 px-4">
           <div className="max-w-4xl mx-auto">
@@ -111,6 +132,18 @@ export default function FiddleSprunkisPage() {
                   <li>Experiment with different combinations</li>
                   <li>Share your musical creations with friends</li>
                 </ol>
+              </div>
+
+              {/* 评论区 */}
+              <div className="bg-black/50 rounded-xl">
+                <div className="p-6 border-b border-[#2EE59D]/10">
+                  <h2 className="text-2xl font-semibold text-[#2EE59D]">Comments</h2>
+                </div>
+                <div className="h-[400px] overflow-y-auto custom-scrollbar">
+                  <div className="p-6">
+                    <Comments />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
