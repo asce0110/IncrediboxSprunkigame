@@ -11,7 +11,7 @@ const featuredGames = [
   {
     id: 1,
     title: 'FiddleSprunkis',
-    coverImage: 'https://sprunkin.com/wp-content/uploads/2025/01/FiddleSprunkis-368x207.png',
+    coverImage: 'https://s.incrediboxsprunkimod.com/public/FiddleSprunkis-368x207.png',
     description: 'A folk-inspired musical journey with a Sprunki twist',
     rating: 4.9,
     players: 285000,

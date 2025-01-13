@@ -3,7 +3,7 @@ import { SimpleGameCard } from './simple-game-card'
 const moreGames = [
   {
     title: 'FiddleSprunkis',
-    image: 'https://sprunkin.com/wp-content/uploads/2025/01/FiddleSprunkis-368x207.png',
+    image: 'https://s.incrediboxsprunkimod.com/public/FiddleSprunkis-368x207.png',
     href: '/fiddlesprunkis'
   },
   {
