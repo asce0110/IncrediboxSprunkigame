@@ -118,7 +118,7 @@ const moreGames = [
   },
   {
     title: 'Sprunki The Sun',
-    image: 'https://959c13b.webp.li/public/sprunki-sun.jpg',
+    image: 'https://s.incrediboxsprunkimod.com/public/Sprunki-the-Sun-368x207.png',
     href: '/sprunki-the-sun'
   },
   {
