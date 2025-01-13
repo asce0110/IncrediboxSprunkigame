@@ -113,7 +113,7 @@ const allGames = [
     href: "/sprunki-cute-time",
     title: "Sprunki Cute Time",
     description: "Adorable musical adventures with kawaii elements",
-    image: "https://959c13b.webp.li/public/sprunki-cute.jpg",
+    image: "https://s.incrediboxsprunkimod.com/public/Sprunki-Cute-Time-368x207.png",
     rating: 4.8,
     players: 232000
   },
