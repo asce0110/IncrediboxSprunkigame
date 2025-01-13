@@ -134,14 +134,6 @@ const allGames = [
     players: 225000
   },
   {
-    href: "/fiddlesprunkis",
-    title: "Fiddlesprunkis",
-    description: "A folk-inspired musical journey with a Sprunki twist",
-    image: "https://959c13b.webp.li/public/fiddlesprunkis.jpg",
-    rating: 4.7,
-    players: 222000
-  },
-  {
     href: "/sprunki-phase-3-reverse",
     title: "Sprunki Phase 3 Reverse",
     description: "Experience classic Sprunki beats in reverse",
