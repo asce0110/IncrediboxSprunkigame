@@ -2,6 +2,11 @@ import { SimpleGameCard } from './simple-game-card'
 
 const moreGames = [
   {
+    title: 'FiddleSprunkis',
+    image: 'https://sprunkin.com/wp-content/uploads/2025/01/FiddleSprunkis-368x207.png',
+    href: '/fiddlesprunkis'
+  },
+  {
     title: 'Gray Sprunki',
     image: 'https://959c13b.webp.li/public/gray-sprunki.png',
     href: '/gray-sprunki'
