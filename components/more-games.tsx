@@ -117,21 +117,6 @@ const moreGames = [
     href: '/sprunki-titanic-cat-gang-edition'
   },
   {
-    title: 'Sprunki But Relish',
-    image: 'https://959c13b.webp.li/public/sprunki-relish.jpg',
-    href: '/sprunki-but-relish'
-  },
-  {
-    title: 'Sprunki Definitive Phase 5',
-    image: 'https://959c13b.webp.li/public/sprunki-phase-5.jpg',
-    href: '/sprunki-definitive-phase-5'
-  },
-  {
-    title: 'Sprunki Cute Time',
-    image: 'https://959c13b.webp.li/public/sprunki-cute.jpg',
-    href: '/sprunki-cute-time'
-  },
-  {
     title: 'Sprunki The Sun',
     image: 'https://959c13b.webp.li/public/sprunki-sun.jpg',
     href: '/sprunki-the-sun'
