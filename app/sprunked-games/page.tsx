@@ -6,12 +6,20 @@ import { ArrowLeft } from 'lucide-react'
 
 const allGames = [
   {
+    href: "/fiddlesprunkis",
+    title: "FiddleSprunkis",
+    description: "A folk-inspired musical journey with a Sprunki twist",
+    image: "https://sprunkin.com/wp-content/uploads/2025/01/FiddleSprunkis-368x207.png",
+    rating: 4.9,
+    players: 285000
+  },
+  {
     href: "/gray-sprunki",
     title: "Gray Sprunki",
     description: "Create amazing beats with Gray Sprunki on IncrediboxSprunkiMod",
     image: "https://959c13b.webp.li/public/gray-sprunki.png",
     rating: 4.9,
-    players: 285000
+    players: 280000
   },
   {
     href: "/sprunked",

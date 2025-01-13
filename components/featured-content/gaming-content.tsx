@@ -10,6 +10,15 @@ import Link from 'next/link'
 const featuredGames = [
   {
     id: 1,
+    title: 'FiddleSprunkis',
+    coverImage: 'https://sprunkin.com/wp-content/uploads/2025/01/FiddleSprunkis-368x207.png',
+    description: 'A folk-inspired musical journey with a Sprunki twist',
+    rating: 4.9,
+    players: 285000,
+    href: '/fiddlesprunkis'
+  },
+  {
+    id: 2,
     title: 'Sprunki Mayonaise 2',
     coverImage: 'https://s.incrediboxsprunkimod.com/public/Sprunki-Mayonaise-2-368x207.png',
     description: 'The creamy musical adventure returns with new features',
@@ -18,7 +27,7 @@ const featuredGames = [
     href: '/sprunki-mayonaise-2'
   },
   {
-    id: 2,
+    id: 3,
     title: 'Sprunki But 15,000,000 FunBots',
     coverImage: 'https://s.incrediboxsprunkimod.com/public/Sprunki-but-15000000-fun-bot-368x207.png',
     description: 'Experience musical mayhem with millions of AI bots',
@@ -27,22 +36,13 @@ const featuredGames = [
     href: '/sprunki-but-15000000-funbots'
   },
   {
-    id: 3,
+    id: 4,
     title: 'Sprunki in Ohio (Brainrot)',
     coverImage: 'https://s.incrediboxsprunkimod.com/public/Sprunki-in-Ohio-Brainrot-368x207.png',
     description: 'Experience the wild and chaotic fusion of Sprunki meets Ohio',
     rating: 4.9,
     players: 255000,
     href: '/sprunki-in-ohio-brainrot'
-  },
-  {
-    id: 4,
-    title: 'Sprunki Terror Phase 30',
-    coverImage: 'https://s.incrediboxsprunkimod.com/public/Sprunki-Terror-Phase-10-368x207.png',
-    description: 'The ultimate horror music experience with terrifying beats',
-    rating: 4.9,
-    players: 248000,
-    href: '/sprunki-terror-phase-30'
   }
 ]
 
