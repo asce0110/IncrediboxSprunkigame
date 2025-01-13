@@ -21,7 +21,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/christmas-sprunki',
     '/sprunki-incredibox',
     '/sprunki-retake',
-    '/neesterversal-v3-incredibox'
+    '/neesterversal-v3-incredibox',
+    '/fiddlesprunkis',
+    '/sprunki-definitive-phase-5',
+    '/sprunki-cute-time',
+    '/kino-sprunked-2-0-mini-remake',
+    '/sprunki-but-15000000-funbots',
+    '/sprunki-in-ohio-brainrot',
+    '/sprunki-terror-phase-30',
+    '/sprunki-titanic-cat-gang-edition',
+    '/sprunki-but-relish',
+    '/sprunki-the-sun',
+    '/sprunki-phase-3-reverse'
   ]
 
   // 基础页面
