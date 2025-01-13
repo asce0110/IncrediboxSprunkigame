@@ -2,36 +2,6 @@ import { SimpleGameCard } from './simple-game-card'
 
 const moreGames = [
   {
-    title: 'FiddleSprunkis',
-    image: 'https://s.incrediboxsprunkimod.com/public/FiddleSprunkis-368x207.png',
-    href: '/fiddlesprunkis'
-  },
-  {
-    title: 'Gray Sprunki',
-    image: 'https://959c13b.webp.li/public/gray-sprunki.png',
-    href: '/gray-sprunki'
-  },
-  {
-    title: 'Sprunked',
-    image: 'https://959c13b.webp.li/public/sprunked.jpg',
-    href: '/sprunked'
-  },
-  {
-    title: 'Sprunki Brud',
-    image: 'https://959c13b.webp.li/public/sprunki-brud.jpg',
-    href: '/sprunki-brud'
-  },
-  {
-    title: 'Game Incredibox',
-    image: 'https://959c13b.webp.li/public/corruptbox1-min.jpg',
-    href: '/gameincredibox'
-  },
-  {
-    title: 'Colorbox Mustard',
-    image: 'https://959c13b.webp.li/public/colorbox-mustard.jpg',
-    href: '/colorboxmustard'
-  },
-  {
     title: 'Cool As Ice',
     image: 'https://959c13b.webp.li/public/coolasice.png',
     href: '/cool-as-ice'
@@ -87,64 +57,14 @@ const moreGames = [
     href: '/incredibox-sprunki-mod'
   },
   {
-    title: 'Neesterversal V3 Incredibox',
-    image: 'https://959c13b.webp.li/public/neesterversal-v3.jpg',
-    href: '/neesterversal-v3-incredibox'
-  },
-  {
-    title: 'Sprunki Mayonaise 2',
-    image: 'https://s.incrediboxsprunkimod.com/public/Sprunki-Mayonaise-2-368x207.png',
-    href: '/sprunki-mayonaise-2'
-  },
-  {
-    title: 'Sprunki But 15,000,000 FunBots',
-    image: 'https://s.incrediboxsprunkimod.com/public/Sprunki-but-15000000-fun-bot-368x207.png',
-    href: '/sprunki-but-15000000-funbots'
-  },
-  {
-    title: 'Sprunki in Ohio (Brainrot)',
-    image: 'https://s.incrediboxsprunkimod.com/public/Sprunki-in-Ohio-Brainrot-368x207.png',
-    href: '/sprunki-in-ohio-brainrot'
-  },
-  {
-    title: 'Sprunki Terror Phase 30',
-    image: 'https://s.incrediboxsprunkimod.com/public/Sprunki-Terror-Phase-10-368x207.png',
-    href: '/sprunki-terror-phase-30'
-  },
-  {
-    title: 'Sprunki Titanic Cat Gang Edition',
-    image: 'https://s.incrediboxsprunkimod.com/public/Sprunki-Titanic-Cat-Gang-Edition-368x207.png',
-    href: '/sprunki-titanic-cat-gang-edition'
-  },
-  {
-    title: 'Sprunki But Relish',
-    image: 'https://959c13b.webp.li/public/sprunki-relish.jpg',
-    href: '/sprunki-but-relish'
-  },
-  {
-    title: 'Sprunki Definitive Phase 5',
-    image: 'https://959c13b.webp.li/public/sprunki-phase-5.jpg',
-    href: '/sprunki-definitive-phase-5'
-  },
-  {
-    title: 'Sprunki Cute Time',
-    image: 'https://959c13b.webp.li/public/sprunki-cute.jpg',
-    href: '/sprunki-cute-time'
-  },
-  {
-    title: 'Sprunki The Sun',
-    image: 'https://959c13b.webp.li/public/sprunki-sun.jpg',
-    href: '/sprunki-the-sun'
-  },
-  {
-    href: '/sprunki-phase-3-reverse',
     title: 'Sprunki Phase 3 Reverse',
-    image: 'https://s.incrediboxsprunkimod.com/public/Sprunki-Phase-3-Reverse-368x207.png'
+    image: 'https://s.incrediboxsprunkimod.com/public/Sprunki-Phase-3-Reverse-368x207.png',
+    href: '/sprunki-phase-3-reverse'
   },
   {
-    href: '/sprunki-but-relish',
     title: 'Sprunki But Relish',
-    image: 'https://s.incrediboxsprunkimod.com/public/RELISH-BUT-SPRUNKI-368x207.png'
+    image: 'https://s.incrediboxsprunkimod.com/public/RELISH-BUT-SPRUNKI-368x207.png',
+    href: '/sprunki-but-relish'
   }
 ]
 
