@@ -17,7 +17,7 @@ const allGames = [
     href: "/gray-sprunki",
     title: "Gray Sprunki",
     description: "Create amazing beats with Gray Sprunki on IncrediboxSprunkiMod",
-    image: "https://959c13b.webp.li/public/gray-sprunki.png",
+    image: "https://s.incrediboxsprunkimod.com/public/gray-sprunki.png",
     rating: 4.9,
     players: 280000
   },
