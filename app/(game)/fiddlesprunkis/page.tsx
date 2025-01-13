@@ -1,3 +1,5 @@
+'use client'
+
 import { ArrowLeft } from 'lucide-react'
 import Link from 'next/link'
 import { useRef, useEffect } from 'react'
