@@ -45,7 +45,7 @@ export default function KinoSprunked20MiniRemakePage() {
             <iframe 
               ref={iframeRef}
               id="game_drop"
-              src="https://html-classic.itch.zone/html/12327519/index.html"
+              src="https://wowtbc.net/sprunkin/kino-sprunked2-mini/index.html"
               className="w-full"
               style={{ 
                 border: 'none',
@@ -53,6 +53,8 @@ export default function KinoSprunked20MiniRemakePage() {
                 height: '600px',
                 marginTop: '40px'
               }}
+              title="Kino Sprunked 2.0: Mini Remake"
+              loading="lazy"
               frameBorder="0"
               allowFullScreen
               scrolling="no"

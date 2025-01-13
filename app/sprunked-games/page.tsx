@@ -113,7 +113,7 @@ const allGames = [
     href: "/sprunki-cute-time",
     title: "Sprunki Cute Time",
     description: "Adorable musical adventures with kawaii elements",
-    image: "https://s.incrediboxsprunkimod.com/public/Sprunki-Cute-Time-368x207.png",
+    image: "https://s.incrediboxsprunkimod.com/public/Sprunki-cute-time-368x207.png",
     rating: 4.8,
     players: 232000
   },
@@ -129,7 +129,7 @@ const allGames = [
     href: "/kino-sprunked-2-0-mini-remake",
     title: "Kino Sprunked 2.0 Mini Remake",
     description: "A cinematic musical experience reimagined",
-    image: "https://959c13b.webp.li/public/kino-sprunked.jpg",
+    image: "https://s.incrediboxsprunkimod.com/public/Kino-Sprunked-2.0-Mini-Remake-368x207.png",
     rating: 4.7,
     players: 225000
   },
