@@ -113,7 +113,7 @@ const allGames = [
     href: "/sprunki-the-sun",
     title: "Sprunki The Sun",
     description: "Create blazing hot beats in this solar-powered edition",
-    image: "https://959c13b.webp.li/public/sprunki-sun.jpg",
+    image: "https://s.incrediboxsprunkimod.com/public/Sprunki-the-Sun-368x207.png",
     rating: 4.8,
     players: 228000
   },
@@ -259,10 +259,10 @@ export default function SprunkedGamesPage() {
             <div>
               <h1 className="text-4xl font-bold text-[#2EE59D] mb-2">
                 More Sprunked Games
-              </h1>
+            </h1>
               <p className="text-gray-400 text-lg">
                 Explore our complete collection of music creation games
-              </p>
+            </p>
             </div>
           </div>
 
