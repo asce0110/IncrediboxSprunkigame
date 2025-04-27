@@ -1,7 +1,7 @@
 import { CategoryIcon } from './icon'
 import { IconGlow } from '@/components/ui/effects/icon-glow'
 import type { CategoryCardProps } from '@/types/category'
-import { Music, Gamepad, Headphones, Mic, Radio, Users } from 'lucide-react'
+import { Music, Gamepad, Headphones, Mic, Radio, Users, Swords, MapPin, Puzzle, Crown } from 'lucide-react'
 import { LucideIcon } from 'lucide-react'
 
 export function CategoryCard({ category }: CategoryCardProps) {
@@ -13,7 +13,11 @@ export function CategoryCard({ category }: CategoryCardProps) {
       'headphones': Headphones,
       'mic': Mic,
       'radio': Radio,
-      'users': Users
+      'users': Users,
+      'swords': Swords,
+      'map-pin': MapPin,
+      'puzzle': Puzzle,
+      'crown': Crown
     }
     return icons[iconName.toLowerCase()] || Music; // 默认使用Music图标
   }
