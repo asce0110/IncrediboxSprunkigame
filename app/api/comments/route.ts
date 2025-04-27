@@ -1,8 +1,25 @@
 import { NextResponse } from 'next/server'
 import { headers } from 'next/headers'
 
+// 定义评论类型接口
+interface CommentUser {
+  name: string;
+  image: string;
+}
+
+interface Comment {
+  id: string;
+  content: string;
+  createdAt: string;
+  user: CommentUser;
+  location: string;
+  likes: number;
+  shares: number;
+  likedBy: string[];
+}
+
 // 内存中模拟存储
-let mockComments = [
+let mockComments: Comment[] = [
   {
     id: '1',
     content: 'This game is amazing! The beats are so satisfying to mix and the interface is intuitive.',
@@ -97,7 +114,7 @@ export async function POST(request: Request) {
 
     const { content, user } = await request.json()
 
-    const newComment = {
+    const newComment: Comment = {
       id: Date.now().toString(),
       content,
       createdAt: new Date().toISOString(),
