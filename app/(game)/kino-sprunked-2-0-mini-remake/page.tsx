@@ -29,7 +29,7 @@ export default function KinoSprunked20MiniRemakePage() {
     <>
       <div className="container mx-auto px-4 py-8">
         <div className="space-y-6">
-          {/* 返回按钮和标�?*/}
+          {/* Back button and title */}
           <div className="flex items-center space-x-4">
             <Link
               href="/sprunked-games"
@@ -41,7 +41,7 @@ export default function KinoSprunked20MiniRemakePage() {
             <h1 className="text-2xl font-bold text-white">Kino Sprunked 2.0 Mini Remake</h1>
           </div>
 
-          {/* 游戏区域 */}
+          {/* Game area */}
           <div className="relative bg-black/50 rounded-xl overflow-hidden shadow-lg shadow-[#2EE59D]/10" style={{ minHeight: '600px' }}>
             <iframe 
               ref={iframeRef}
@@ -65,7 +65,7 @@ export default function KinoSprunked20MiniRemakePage() {
             <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black via-black/95 to-transparent z-10" />
           </div>
 
-          {/* 游戏介绍和SEO内容 */}
+          {/* Game introduction and SEO content */}
           <div className="mt-8 space-y-6">
             <div className="p-6 bg-black/50 rounded-xl">
               <h2 className="text-2xl font-semibold text-[#2EE59D] mb-4">
@@ -76,7 +76,7 @@ export default function KinoSprunked20MiniRemakePage() {
               </p>
             </div>
 
-            {/* 游戏特点 */}
+            {/* Game features */}
             <div className="p-6 bg-black/50 rounded-xl">
               <h2 className="text-2xl font-semibold text-[#2EE59D] mb-6">
                 Why Play Kino Sprunked 2.0 Mini Remake?
@@ -104,7 +104,7 @@ export default function KinoSprunked20MiniRemakePage() {
             </div>
           </div>
 
-            {/* 评论�?*/}
+            {/* Comments section */}
             <div className="bg-black/50 rounded-xl">
               <div className="p-6 border-b border-[#2EE59D]/10">
                 <h2 className="text-2xl font-semibold text-[#2EE59D]">Comments</h2>
