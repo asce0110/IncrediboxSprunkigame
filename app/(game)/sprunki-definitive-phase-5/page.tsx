@@ -1,9 +1,10 @@
-'use client'
+﻿'use client'
 
 import { useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
-import { Comments } from '@/components/comments'
+import { CommentsMock } from '@/components/comments-mock'
+import { GameNav } from '@/components/game/game-nav'
 import Head from 'next/head'
 
 export default function SprunckiDefinitivePhase5Page() {
@@ -26,7 +27,8 @@ export default function SprunckiDefinitivePhase5Page() {
   }, [])
 
   return (
-    <>
+    <div className="min-h-screen bg-black/90">
+      <GameNav title="Sprunki Definitive Phase 5" />
       <Head>
         <title>Sprunki Definitive Phase 5 - The Ultimate Music Creation Experience</title>
         <meta name="description" content="Play Sprunki Definitive Phase 5, the ultimate refined version of the Sprunki series. Experience enhanced sound libraries, improved mechanics, and new features in this definitive music creation game." />
@@ -47,7 +49,7 @@ export default function SprunckiDefinitivePhase5Page() {
 
       <div className="container mx-auto px-4 py-8">
         <div className="space-y-6">
-          {/* 返回按钮和标题 */}
+          {/* 杩斿洖鎸夐挳鍜屾爣棰?*/}
           <div className="flex items-center space-x-4">
             <Link
               href="/sprunked-games"
@@ -59,7 +61,7 @@ export default function SprunckiDefinitivePhase5Page() {
             <h1 className="text-2xl font-bold text-white">Sprunki Definitive Phase 5</h1>
           </div>
 
-          {/* 游戏区域 */}
+          {/* 娓告垙鍖哄煙 */}
           <div className="relative bg-black/50 rounded-xl overflow-hidden shadow-lg shadow-[#2EE59D]/10" style={{ minHeight: '600px' }}>
             <iframe 
               ref={iframeRef}
@@ -83,7 +85,7 @@ export default function SprunckiDefinitivePhase5Page() {
             <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black via-black/95 to-transparent z-10" />
           </div>
 
-          {/* 游戏介绍和SEO内容 */}
+          {/* 娓告垙浠嬬粛鍜孲EO鍐呭 */}
           <div className="mt-8 space-y-6">
             <div className="p-6 bg-black/50 rounded-xl">
               <h2 className="text-2xl font-semibold text-[#2EE59D] mb-4">
@@ -94,7 +96,7 @@ export default function SprunckiDefinitivePhase5Page() {
               </p>
             </div>
 
-            {/* 游戏特点 */}
+            {/* 娓告垙鐗圭偣 */}
             <div className="p-6 bg-black/50 rounded-xl">
               <h2 className="text-2xl font-semibold text-[#2EE59D] mb-6">
                 Why Play Sprunki Definitive Phase 5?
@@ -122,20 +124,21 @@ export default function SprunckiDefinitivePhase5Page() {
               </div>
             </div>
 
-            {/* 评论区 */}
+            {/* 璇勮鍖?*/}
             <div className="bg-black/50 rounded-xl">
               <div className="p-6 border-b border-[#2EE59D]/10">
                 <h2 className="text-2xl font-semibold text-[#2EE59D]">Comments</h2>
               </div>
               <div className="h-[400px] overflow-y-auto custom-scrollbar">
                 <div className="p-6">
-                  <Comments />
+                  <CommentsMock />
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 } 
+

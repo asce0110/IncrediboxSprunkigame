@@ -3,7 +3,8 @@
 import { useRef, useEffect } from 'react'
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
-import { Comments } from '@/components/comments'
+import {  Comments  } from '@/components/comments'
+import { GameNav } from '@/components/game/game-nav'
 
 export default function SprunkiPhase3ReversePage() {
   const iframeRef = useRef<HTMLIFrameElement>(null)

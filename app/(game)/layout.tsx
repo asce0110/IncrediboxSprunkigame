@@ -17,8 +17,8 @@ export default function GameLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning className="dark">
-      <body className={`${inter.className} min-h-screen bg-black text-white`}>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${inter.className} min-h-screen bg-gray-100 text-gray-800 dark:bg-black dark:text-white transition-colors duration-300`}>
         <RootProvider>
           {children}
           <Footer />

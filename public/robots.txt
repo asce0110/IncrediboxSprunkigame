@@ -1,6 +1,0 @@
- # https://incrediboxsprunkimod.com/
-User-agent: *
-Allow: /
-
-# Sitemaps
-Sitemap: https://incrediboxsprunkimod.com/sitemap.xml

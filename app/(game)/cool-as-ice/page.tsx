@@ -2,8 +2,9 @@
 
 import { useRef, useEffect } from 'react'
 import Link from 'next/link'
+import { GameNav } from '@/components/game/game-nav'
 import { ArrowLeft } from 'lucide-react'
-import { Comments } from '@/components/comments'
+import { CommentsMock } from '@/components/comments-mock'
 
 export default function CoolAsIcePage() {
   const iframeRef = useRef<HTMLIFrameElement>(null)
@@ -27,28 +28,17 @@ export default function CoolAsIcePage() {
   return (
     <>
       <div className="min-h-screen bg-black/90">
+        <GameNav title="Cool As Ice" />
         <div className="container mx-auto py-4 px-4">
           <div className="max-w-4xl mx-auto">
             {/* SEO优化的标题区域 */}
-            <div className="mb-4 flex items-center gap-6">
-              <Link 
-                href="/" 
-                className="group flex items-center justify-center w-12 h-12 rounded-full bg-black/50 hover:bg-[#2EE59D]/10 transition-all duration-300"
-              >
-                <div className="relative">
-                  <div className="absolute inset-0 rounded-full bg-[#2EE59D]/20 blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <ArrowLeft className="w-6 h-6 text-[#2EE59D] relative z-10" />
-                </div>
-              </Link>
-
-              <div>
-                <h1 className="text-4xl font-bold text-[#2EE59D] mb-2">
-                  Cool As Ice - Winter Music Creation on IncrediboxSprunkiMod
-                </h1>
-                <p className="text-gray-400 text-lg">
-                  Create Chill Winter Beats with Cool As Ice - The Ultimate Winter Music Game on IncrediboxSprunkiMod
-                </p>
-              </div>
+            <div className="mb-4">
+              <h1 className="text-4xl font-bold text-[#2EE59D] mb-2">
+                Cool As Ice - Winter Music Creation on IncrediboxSprunkiMod
+              </h1>
+              <p className="text-gray-400 text-lg">
+                Create Chill Winter Beats with Cool As Ice - The Ultimate Winter Music Game on IncrediboxSprunkiMod
+              </p>
             </div>
 
             {/* 游戏区域 */}
@@ -131,9 +121,9 @@ export default function CoolAsIcePage() {
                 <div className="p-6 border-b border-[#2EE59D]/10">
                   <h2 className="text-2xl font-semibold text-[#2EE59D]">Comments</h2>
                 </div>
-                <div className="h-[400px] overflow-y-auto custom-scrollbar">
+                <div className="overflow-y-auto custom-scrollbar">
                   <div className="p-6">
-                    <Comments />
+                    <CommentsMock />
                   </div>
                 </div>
               </div>

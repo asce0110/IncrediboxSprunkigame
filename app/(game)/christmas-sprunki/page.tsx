@@ -1,10 +1,10 @@
-'use client'
+﻿'use client'
 
+import { useRef, useEffect } from 'react'
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
-import { useRef, useEffect } from 'react'
-import Head from 'next/head'
 import { Comments } from '@/components/comments'
+import { GameNav } from '@/components/game/game-nav'
 
 export default function ChristmasSprunkiPage() {
   const iframeRef = useRef<HTMLIFrameElement>(null)
@@ -27,68 +27,29 @@ export default function ChristmasSprunkiPage() {
 
   return (
     <>
-      <Head>
-        <title>Christmas Sprunki - Best Christmas Music Creation Game | Play Online Free</title>
-        <meta name="description" content="Play Christmas Sprunki online - The ultimate Christmas music creation game. Create festive beats, mix holiday sounds, and share your Christmas music. Perfect for holiday music makers!" />
-        <meta name="keywords" content="Christmas Sprunki, Christmas music game, holiday music maker, Christmas beats, Christmas music creator, Christmas Sprunki game" />
-        
-        {/* Open Graph / Social Media Meta Tags */}
-        <meta property="og:title" content="Christmas Sprunki - Create Your Own Christmas Music Online" />
-        <meta property="og:description" content="Create festive Christmas music with Christmas Sprunki. Mix holiday beats, jingle bells, and Christmas sounds in this unique music creation game." />
-        <meta property="og:image" content="/christmas-sprunki-og.jpg" />
-        <meta property="og:url" content="https://yourdomain.com/christmas-sprunki" />
-        
-        {/* Additional SEO Meta Tags */}
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="Sprunki Games" />
-        <link rel="canonical" href="https://yourdomain.com/christmas-sprunki" />
-        
-        {/* Schema.org Markup for Google */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebApplication",
-            "name": "Christmas Sprunki",
-            "description": "The ultimate Christmas music creation game. Create festive beats and holiday music online.",
-            "applicationCategory": "Game",
-            "genre": "Music Creation",
-            "image": "https://yourdomain.com/christmas-sprunki-og.jpg",
-            "url": "https://yourdomain.com/christmas-sprunki",
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.9",
-              "ratingCount": "2150"
-            },
-            "offers": {
-              "@type": "Offer",
-              "price": "0",
-              "priceCurrency": "USD"
-            }
-          })}
-        </script>
-      </Head>
-      
+      <GameNav title="Christmas Sprunki" />
       <div className="min-h-screen bg-black/90">
         <div className="container mx-auto py-4 px-4">
-          <div className="max-w-7xl mx-auto">
-            {/* SEO优化的标题区域 */}
-            <div className="mb-4 flex items-center gap-6">
+          <div className="max-w-4xl mx-auto">
+            {/* 标题区域 */}
+            <div className="mb-6 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
               <Link 
                 href="/" 
-                className="group flex items-center justify-center w-12 h-12 rounded-full bg-black/50 hover:bg-[#2EE59D]/10 transition-all duration-300"
+                className="group flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black/50 hover:bg-[#2EE59D]/10 transition-all duration-300 shrink-0"
               >
                 <div className="relative">
                   <div className="absolute inset-0 rounded-full bg-[#2EE59D]/20 blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <ArrowLeft className="w-6 h-6 text-[#2EE59D] relative z-10" />
+                  <ArrowLeft className="w-5 h-5 sm:w-6 sm:h-6 text-[#2EE59D] relative z-10" />
                 </div>
               </Link>
 
-              <div>
-                <h1 className="text-4xl font-bold text-[#2EE59D] mb-2">
-                  Christmas Sprunki - Holiday Music Creation Game
+              <div className="w-full">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#2EE59D] mb-2 break-words">
+                  Christmas Sprunki
+                  <span className="block text-lg sm:text-xl md:text-2xl mt-1 text-white/90">Holiday Music Creation</span>
                 </h1>
-                <p className="text-gray-400 text-lg">
-                  Create magical Christmas music with festive beats and holiday sounds
+                <p className="text-sm sm:text-base md:text-lg text-gray-400">
+                  Experience the festive joy of Christmas with Sprunki music creation
                 </p>
               </div>
             </div>
@@ -98,73 +59,126 @@ export default function ChristmasSprunkiPage() {
               <iframe 
                 ref={iframeRef}
                 id="game_drop"
+                src="https://html-classic.itch.zone/html/12037105/christmas/index.html"
+                className="w-full"
+                style={{ 
+                  border: 'none',
+                  backgroundColor: 'black',
+                  height: '600px',
+                  marginTop: '40px'
+                }}
+                frameBorder="0"
                 allowFullScreen
-                style={{ width: '100%' }}
+                scrolling="no"
+                allow="autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; xr; cross-origin-isolated; web-share"
               />
               <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black via-black/95 to-transparent z-10" />
             </div>
 
-            {/* 游戏介绍和评论区域布局 */}
-            <div className="mt-8">
-              <div className="space-y-6">
-                {/* 评论区 */}
-                <div className="bg-black/50 rounded-xl">
-                  <div className="p-6 border-b border-[#2EE59D]/10">
-                    <h2 className="text-2xl font-semibold text-[#2EE59D]">Comments</h2>
+            {/* 游戏介绍和内容 */}
+            <div className="mt-8 space-y-6">
+              <div className="p-4 sm:p-6 bg-black/50 rounded-xl">
+                <h2 className="text-xl sm:text-2xl font-semibold text-[#2EE59D] mb-4">
+                  About Christmas Sprunki
+                </h2>
+                <p className="text-sm sm:text-base text-gray-300 mb-4">
+                  Celebrate the holiday season with Christmas Sprunki, a festive version of the popular music creation game. Create joyful holiday tunes with special Christmas-themed sounds, visuals, and characters that bring the spirit of the season to life.
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mt-6">
+                  <div className="flex flex-col items-center p-3 sm:p-4 bg-black/30 rounded-lg">
+                    <span className="text-[#2EE59D] font-bold text-base sm:text-lg mb-1 sm:mb-2">Festive Sounds</span>
+                    <span className="text-sm sm:text-base text-gray-400 text-center">Holiday-themed music samples</span>
                   </div>
-                  <div className="h-[600px] overflow-y-auto custom-scrollbar">
-                    <div className="p-6">
-                      <Comments />
-                    </div>
+                  <div className="flex flex-col items-center p-3 sm:p-4 bg-black/30 rounded-lg">
+                    <span className="text-[#2EE59D] font-bold text-base sm:text-lg mb-1 sm:mb-2">Christmas Joy</span>
+                    <span className="text-sm sm:text-base text-gray-400 text-center">Spread holiday cheer with music</span>
                   </div>
-                </div>
-
-                {/* 游戏介绍 */}
-                <div className="p-6 bg-black/50 rounded-xl">
-                  <h2 className="text-2xl font-semibold text-[#2EE59D] mb-4">
-                    About Christmas Sprunki
-                  </h2>
-                  <p className="text-gray-300 mb-4">
-                    Christmas Sprunki is the ultimate holiday music creation experience. Immerse yourself in a festive wonderland where you can create magical Christmas music using our collection of holiday-themed sounds, jingle bells, and seasonal beats. Perfect for spreading Christmas cheer through music!
-                  </p>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
-                    <div className="flex flex-col items-center p-4 bg-black/30 rounded-lg">
-                      <span className="text-[#2EE59D] font-bold text-lg mb-2">Holiday Beats</span>
-                      <span className="text-gray-400 text-center">Festive rhythms and Christmas samples</span>
-                    </div>
-                    <div className="flex flex-col items-center p-4 bg-black/30 rounded-lg">
-                      <span className="text-[#2EE59D] font-bold text-lg mb-2">Christmas Effects</span>
-                      <span className="text-gray-400 text-center">Magical holiday sound effects</span>
-                    </div>
-                    <div className="flex flex-col items-center p-4 bg-black/30 rounded-lg">
-                      <span className="text-[#2EE59D] font-bold text-lg mb-2">Festive Tools</span>
-                      <span className="text-gray-400 text-center">Special Christmas mixing features</span>
-                    </div>
+                  <div className="flex flex-col items-center p-3 sm:p-4 bg-black/30 rounded-lg">
+                    <span className="text-[#2EE59D] font-bold text-base sm:text-lg mb-1 sm:mb-2">Winter Fun</span>
+                    <span className="text-sm sm:text-base text-gray-400 text-center">Seasonal visuals and effects</span>
                   </div>
                 </div>
+              </div>
 
-                {/* FAQ部分 */}
-                <div className="p-6 bg-black/50 rounded-xl">
-                  <h2 className="text-2xl font-semibold text-[#2EE59D] mb-6">
-                    Frequently Asked Questions
-                  </h2>
-                  <div className="space-y-4">
-                    <div className="border-b border-[#2EE59D]/10 pb-4">
-                      <h3 className="text-lg font-medium text-white mb-2">What makes Christmas Sprunki unique?</h3>
-                      <p className="text-gray-400">Christmas Sprunki combines festive music creation with holiday-themed visuals and special Christmas sound effects, creating a magical holiday music experience unlike any other.</p>
-                    </div>
-                    <div className="border-b border-[#2EE59D]/10 pb-4">
-                      <h3 className="text-lg font-medium text-white mb-2">How do I create Christmas music?</h3>
-                      <p className="text-gray-400">Simply drag and drop festive characters onto the stage to start creating. Each character brings unique Christmas sounds to your mix, from jingle bells to holiday beats.</p>
-                    </div>
-                    <div className="border-b border-[#2EE59D]/10 pb-4">
-                      <h3 className="text-lg font-medium text-white mb-2">Can I share my Christmas creations?</h3>
-                      <p className="text-gray-400">Yes! Save and share your Christmas masterpieces with friends and family. Spread holiday joy with your unique musical creations!</p>
-                    </div>
-                    <div className="border-b border-[#2EE59D]/10 pb-4">
-                      <h3 className="text-lg font-medium text-white mb-2">Is Christmas Sprunki free to play?</h3>
-                      <p className="text-gray-400">Yes, Christmas Sprunki is completely free to play online. Start creating your festive music right away!</p>
-                    </div>
+              {/* 游戏特点 */}
+              <div className="p-4 sm:p-6 bg-black/50 rounded-xl">
+                <h2 className="text-xl sm:text-2xl font-semibold text-[#2EE59D] mb-4 sm:mb-6">
+                  Why Play Christmas Sprunki?
+                </h2>
+                <div className="space-y-4">
+                  <div className="border-b border-[#2EE59D]/10 pb-4">
+                    <h3 className="text-base sm:text-lg font-medium text-white mb-2">Holiday Spirit</h3>
+                    <p className="text-sm sm:text-base text-gray-400">Immerse yourself in the festive atmosphere with Christmas-themed music creation.</p>
+                  </div>
+
+                  <div className="border-b border-[#2EE59D]/10 pb-4">
+                    <h3 className="text-base sm:text-lg font-medium text-white mb-2">Seasonal Sounds</h3>
+                    <p className="text-sm sm:text-base text-gray-400">Access unique holiday sound effects and musical samples not available in the regular version.</p>
+                  </div>
+
+                  <div className="border-b border-[#2EE59D]/10 pb-4">
+                    <h3 className="text-base sm:text-lg font-medium text-white mb-2">Festive Characters</h3>
+                    <p className="text-sm sm:text-base text-gray-400">Enjoy special Christmas-themed characters and animations that bring holiday joy.</p>
+                  </div>
+
+                  <div className="border-b border-[#2EE59D]/10 pb-4">
+                    <h3 className="text-base sm:text-lg font-medium text-white mb-2">Share Holiday Cheer</h3>
+                    <p className="text-sm sm:text-base text-gray-400">Create and share your Christmas compositions with friends and family for the perfect holiday greeting.</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* 评论区 */}
+              <div className="bg-black/50 rounded-xl">
+                <div className="p-4 sm:p-6 border-b border-[#2EE59D]/10">
+                  <h2 className="text-xl sm:text-2xl font-semibold text-[#2EE59D]">Comments</h2>
+                </div>
+                <div className="h-[400px] overflow-y-auto custom-scrollbar">
+                  <div className="p-4 sm:p-6">
+                    <Comments />
+                  </div>
+                </div>
+              </div>
+
+              {/* FAQ Section */}
+              <div className="p-4 sm:p-6 bg-black/50 rounded-xl">
+                <h2 className="text-xl sm:text-2xl font-semibold text-[#2EE59D] mb-4 sm:mb-6">
+                  FAQ
+                </h2>
+                <div className="space-y-4">
+                  <div className="border-b border-[#2EE59D]/10 pb-4">
+                    <h3 className="text-lg font-medium text-white mb-2">What is Christmas Sprunki?</h3>
+                    <p className="text-gray-400">Christmas Sprunki is a holiday-themed version of the Sprunki music creation game, featuring festive sounds, visuals, and special Christmas elements.</p>
+                  </div>
+
+                  <div className="border-b border-[#2EE59D]/10 pb-4">
+                    <h3 className="text-lg font-medium text-white mb-2">Is it only available during Christmas?</h3>
+                    <p className="text-gray-400">While it's especially popular during the holiday season, Christmas Sprunki is available to play year-round for those who want to spread Christmas cheer any time.</p>
+                  </div>
+
+                  <div className="border-b border-[#2EE59D]/10 pb-4">
+                    <h3 className="text-lg font-medium text-white mb-2">How is it different from regular Sprunki?</h3>
+                    <p className="text-gray-400">It includes special holiday-themed sound samples, festive visuals, snow effects, and Christmas characters that aren't available in the standard version.</p>
+                  </div>
+
+                  <div className="border-b border-[#2EE59D]/10 pb-4">
+                    <h3 className="text-lg font-medium text-white mb-2">Can I save my Christmas creations?</h3>
+                    <p className="text-gray-400">Yes, you can save and share your holiday music compositions with others, making them perfect for digital Christmas cards.</p>
+                  </div>
+
+                  <div className="border-b border-[#2EE59D]/10 pb-4">
+                    <h3 className="text-lg font-medium text-white mb-2">Is Christmas Sprunki free to play?</h3>
+                    <p className="text-gray-400">Yes, Christmas Sprunki is completely free to play and enjoy throughout the year.</p>
+                  </div>
+
+                  <div className="border-b border-[#2EE59D]/10 pb-4">
+                    <h3 className="text-lg font-medium text-white mb-2">Will there be other holiday versions?</h3>
+                    <p className="text-gray-400">We're always considering new seasonal versions of Sprunki for different holidays and special occasions.</p>
+                  </div>
+
+                  <div className="pb-4">
+                    <h3 className="text-lg font-medium text-white mb-2">Are there achievements specific to Christmas Sprunki?</h3>
+                    <p className="text-gray-400">Yes, there are special holiday-themed achievements you can unlock by creating certain combinations or discovering hidden festive features.</p>
                   </div>
                 </div>
               </div>
@@ -174,4 +188,4 @@ export default function ChristmasSprunkiPage() {
       </div>
     </>
   )
-} 
+}

@@ -1,9 +1,24 @@
 import { cn } from '@/lib/utils'
 import type { CategoryCardProps } from '@/types/category'
 import Link from 'next/link'
+import { Music, Gamepad, Headphones, Mic, Radio, Users } from 'lucide-react'
+import { LucideIcon } from 'lucide-react'
 
 export function CategoryCard({ category }: CategoryCardProps) {
-  const Icon = category.icon
+  // 从图标名称获取实际的图标组件
+  const getIconComponent = (iconName: string): LucideIcon => {
+    const icons: Record<string, LucideIcon> = {
+      'music': Music,
+      'gamepad': Gamepad,
+      'headphones': Headphones,
+      'mic': Mic,
+      'radio': Radio,
+      'users': Users
+    }
+    return icons[iconName] || Music; // 默认使用Music图标
+  }
+
+  const IconComponent = category.icon ? getIconComponent(category.icon) : Music;
 
   return (
     <Link href="/sprunked-games" className="block">
@@ -43,7 +58,7 @@ export function CategoryCard({ category }: CategoryCardProps) {
             
             {/* Icon */}
             <div className="relative">
-              <Icon className="w-10 h-10 mx-auto text-[#2EE59D] opacity-90 group-hover:opacity-100 transition-all duration-300 
+              <IconComponent className="w-10 h-10 mx-auto text-[#2EE59D] opacity-90 group-hover:opacity-100 transition-all duration-300 
                 [filter:drop-shadow(0_0_8px_rgba(46,229,157,0.3))] group-hover:[filter:drop-shadow(0_0_12px_rgba(46,229,157,0.5))]" />
             </div>
           </div>

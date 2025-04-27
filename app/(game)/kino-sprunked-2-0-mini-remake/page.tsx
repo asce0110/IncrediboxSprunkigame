@@ -2,8 +2,9 @@
 
 import { useEffect, useRef } from 'react'
 import Link from 'next/link'
+import { GameNav } from '@/components/game/game-nav'
 import { ArrowLeft } from 'lucide-react'
-import { Comments } from '@/components/comments'
+import { CommentsMock } from '@/components/comments-mock'
 
 export default function KinoSprunked20MiniRemakePage() {
   const iframeRef = useRef<HTMLIFrameElement>(null)
@@ -28,7 +29,7 @@ export default function KinoSprunked20MiniRemakePage() {
     <>
       <div className="container mx-auto px-4 py-8">
         <div className="space-y-6">
-          {/* 返回按钮和标题 */}
+          {/* 返回按钮和标�?*/}
           <div className="flex items-center space-x-4">
             <Link
               href="/sprunked-games"
@@ -100,23 +101,23 @@ export default function KinoSprunked20MiniRemakePage() {
                   <h3 className="text-lg font-medium text-white mb-2">Classic Feel</h3>
                   <p className="text-gray-400">Rediscover the magic of the original Kino Sprunked with modern enhancements and quality-of-life improvements.</p>
                 </div>
-              </div>
             </div>
+          </div>
 
-            {/* 评论区 */}
+            {/* 评论�?*/}
             <div className="bg-black/50 rounded-xl">
               <div className="p-6 border-b border-[#2EE59D]/10">
                 <h2 className="text-2xl font-semibold text-[#2EE59D]">Comments</h2>
               </div>
-              <div className="h-[400px] overflow-y-auto custom-scrollbar">
+              <div className="overflow-y-auto custom-scrollbar">
                 <div className="p-6">
-                  <Comments />
+                  <CommentsMock />
                 </div>
-              </div>
             </div>
           </div>
-        </div>
-      </div>
+          </div>
+            </div>
+          </div>
     </>
   )
 } 

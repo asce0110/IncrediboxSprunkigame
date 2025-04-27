@@ -4,6 +4,7 @@ import { useRef, useEffect } from 'react'
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
 import { Comments } from '@/components/comments'
+import { GameNav } from '@/components/game/game-nav'
 
 export default function SprunkiFunbotsPage() {
   const iframeRef = useRef<HTMLIFrameElement>(null)
@@ -26,6 +27,7 @@ export default function SprunkiFunbotsPage() {
 
   return (
     <>
+      <GameNav title="Sprunki But 15,000,000 FunBots" />
       <div className="min-h-screen bg-black/90">
         <div className="container mx-auto py-4 px-4">
           <div className="max-w-4xl mx-auto">

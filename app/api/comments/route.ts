@@ -1,161 +1,88 @@
 import { NextResponse } from 'next/server'
-import { getServerSession } from 'next-auth'
 import { headers } from 'next/headers'
 
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN
-const REPO_OWNER = process.env.GITHUB_REPO_OWNER
-const REPO_NAME = process.env.GITHUB_REPO_NAME
-const FILE_PATH = 'data/comments.json'
-
-if (!GITHUB_TOKEN || !REPO_OWNER || !REPO_NAME) {
-  throw new Error('Missing required GitHub configuration')
-}
+// 内存中模拟存储
+let mockComments = [
+  {
+    id: '1',
+    content: 'This game is amazing! The beats are so satisfying to mix and the interface is intuitive.',
+    createdAt: '2023-11-15T14:32:00Z',
+    user: {
+      name: 'MusicLover',
+      image: 'https://api.dicebear.com/7.x/personas/svg?seed=MusicLover'
+    },
+    location: 'United States',
+    likes: 24,
+    shares: 3,
+    likedBy: []
+  },
+  {
+    id: '2',
+    content: 'I\'ve been playing for hours! Can\'t get enough of the sound combinations you can create. Definitely my new favorite music game!',
+    createdAt: '2023-11-14T09:17:00Z',
+    user: {
+      name: 'BeatMaker42',
+      image: 'https://api.dicebear.com/7.x/personas/svg?seed=BeatMaker42'
+    },
+    location: 'Germany',
+    likes: 18,
+    shares: 1,
+    likedBy: []
+  },
+  {
+    id: '3',
+    content: 'Very creative concept. I wish there were more sound options though.',
+    createdAt: '2023-11-13T22:05:00Z',
+    user: {
+      name: 'RhythmExplorer',
+      image: 'https://api.dicebear.com/7.x/personas/svg?seed=RhythmExplorer'
+    },
+    location: 'Canada',
+    likes: 7,
+    shares: 0,
+    likedBy: []
+  },
+  {
+    id: '4',
+    content: "Perfect way to spend a rainy afternoon. I've created some really cool beats!",
+    createdAt: '2023-11-12T16:48:00Z',
+    user: {
+      name: 'MelodyMaster',
+      image: 'https://api.dicebear.com/7.x/personas/svg?seed=MelodyMaster'
+    },
+    location: 'Japan',
+    likes: 15,
+    shares: 2,
+    likedBy: []
+  },
+  {
+    id: '5',
+    content: 'Great for stress relief and just having fun with music creation!',
+    createdAt: '2023-11-11T11:23:00Z',
+    user: {
+      name: 'SoundWave',
+      image: 'https://api.dicebear.com/7.x/personas/svg?seed=SoundWave'
+    },
+    location: 'Australia',
+    likes: 9,
+    shares: 1,
+    likedBy: []
+  }
+];
 
 async function getLocationFromIP(ip: string) {
   try {
-    const response = await fetch(`http://ip-api.com/json/${ip}`)
-    const data = await response.json()
-    if (data.status === 'success') {
-      return `${data.country}, ${data.regionName}`
-    }
-    return 'Unknown Location'
+    // 为了简化，直接返回一个模拟位置
+    return 'Simulated Location'
   } catch (error) {
     console.error('Error getting location:', error)
     return 'Unknown Location'
   }
 }
 
-async function fetchComments() {
-  try {
-    console.log('Fetching comments from GitHub...')
-    console.log('Repository:', `${REPO_OWNER}/${REPO_NAME}`)
-    
-    const response = await fetch(
-      `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${FILE_PATH}`,
-      {
-        headers: {
-          'Authorization': `Bearer ${GITHUB_TOKEN}`,
-          'Accept': 'application/vnd.github.v3+json',
-          'X-GitHub-Api-Version': '2022-11-28'
-        },
-        cache: 'no-store'
-      }
-    )
-
-    console.log('GitHub API Response Status:', response.status)
-    
-    if (response.status === 404) {
-      console.log('Comments file not found, creating new file')
-      const createResponse = await fetch(
-        `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${FILE_PATH}`,
-        {
-          method: 'PUT',
-          headers: {
-            'Authorization': `Bearer ${GITHUB_TOKEN}`,
-            'Accept': 'application/vnd.github.v3+json',
-            'X-GitHub-Api-Version': '2022-11-28',
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            message: 'Initialize comments.json',
-            content: Buffer.from('[]').toString('base64')
-          })
-        }
-      )
-
-      if (!createResponse.ok) {
-        const errorText = await createResponse.text()
-        console.error('Error creating file:', errorText)
-        throw new Error(`Failed to create file: ${createResponse.status} ${errorText}`)
-      }
-
-      return []
-    }
-
-    if (!response.ok) {
-      const errorText = await response.text()
-      console.error('GitHub API Error:', errorText)
-      throw new Error(`GitHub API error: ${response.status} ${errorText}`)
-    }
-
-    const data = await response.json()
-    console.log('Fetched data SHA:', data.sha)
-    const content = Buffer.from(data.content, 'base64').toString()
-    const comments = JSON.parse(content || '[]')
-    console.log('Fetched comments count:', comments.length)
-    return comments
-  } catch (error) {
-    console.error('Error fetching comments:', error)
-    throw error
-  }
-}
-
-async function saveComments(comments: any[], message: string) {
-  try {
-    console.log('Saving comments to GitHub...')
-    console.log('Comments count:', comments.length)
-    
-    // First get the current file to get its SHA
-    const currentFile = await fetch(
-      `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${FILE_PATH}`,
-      {
-        headers: {
-          'Authorization': `Bearer ${GITHUB_TOKEN}`,
-          'Accept': 'application/vnd.github.v3+json',
-          'X-GitHub-Api-Version': '2022-11-28'
-        },
-        cache: 'no-store'
-      }
-    ).then(res => {
-      if (!res.ok) {
-        const error = `Failed to get current file: ${res.status}`
-        console.error(error)
-        throw new Error(error)
-      }
-      return res.json()
-    })
-
-    console.log('Current file SHA:', currentFile?.sha)
-
-    const content = Buffer.from(JSON.stringify(comments, null, 2)).toString('base64')
-    
-    const response = await fetch(
-      `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${FILE_PATH}`,
-      {
-        method: 'PUT',
-        headers: {
-          'Authorization': `Bearer ${GITHUB_TOKEN}`,
-          'Accept': 'application/vnd.github.v3+json',
-          'X-GitHub-Api-Version': '2022-11-28',
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          message,
-          content,
-          sha: currentFile?.sha
-        })
-      }
-    )
-
-    if (!response.ok) {
-      const errorText = await response.text()
-      console.error('Error saving comments:', errorText)
-      throw new Error(`Failed to save comments: ${response.status} ${errorText}`)
-    }
-
-    const result = await response.json()
-    console.log('Comments saved successfully')
-    return result
-  } catch (error) {
-    console.error('Error in saveComments:', error)
-    throw error
-  }
-}
-
 export async function GET() {
   try {
-    const comments = await fetchComments()
-    return NextResponse.json(comments)
+    return NextResponse.json(mockComments)
   } catch (error) {
     console.error('Error in GET:', error)
     return new NextResponse('Internal Server Error', { status: 500 })
@@ -164,25 +91,19 @@ export async function GET() {
 
 export async function POST(request: Request) {
   try {
-    const session = await getServerSession()
-    if (!session?.user) {
-      return new NextResponse('Unauthorized', { status: 401 })
-    }
-
     const headersList = headers()
     const ip = headersList.get('x-forwarded-for') || ''
     const location = await getLocationFromIP(ip)
 
-    const { content } = await request.json()
-    const comments = await fetchComments()
+    const { content, user } = await request.json()
 
     const newComment = {
       id: Date.now().toString(),
       content,
       createdAt: new Date().toISOString(),
       user: {
-        name: session.user.name || 'Anonymous',
-        image: session.user.image || 'https://github.com/ghost.png'
+        name: user?.name || 'Anonymous',
+        image: user?.image || 'https://api.dicebear.com/7.x/personas/svg?seed=Anonymous'
       },
       location,
       likes: 0,
@@ -190,8 +111,7 @@ export async function POST(request: Request) {
       likedBy: []
     }
 
-    comments.unshift(newComment)
-    await saveComments(comments, `Add comment by ${session.user.name}`)
+    mockComments.unshift(newComment)
 
     return NextResponse.json(newComment)
   } catch (error) {
@@ -201,32 +121,28 @@ export async function POST(request: Request) {
 }
 
 export async function PUT(request: Request) {
-  const session = await getServerSession()
-  if (!session?.user) {
-    return new NextResponse('Unauthorized', { status: 401 })
-  }
-
   try {
-    const { commentId, action } = await request.json()
-    const comments = await fetchComments()
-    const comment = comments.find((c: { id: string }) => c.id === commentId)    
+    const { commentId, action, user } = await request.json()
+    const comment = mockComments.find((c) => c.id === commentId)    
     if (!comment) {
       return new NextResponse('Comment not found', { status: 404 })
     }
 
+    const userEmail = user?.email || 'anonymous@example.com'
+
     if (action === 'like') {
-      const userHasLiked = comment.likedBy.includes(session.user.email || '')
+      const userHasLiked = comment.likedBy.includes(userEmail)
       if (userHasLiked) {
         comment.likes -= 1
-        comment.likedBy = comment.likedBy.filter((email: string) => email !== session.user?.email)      } else {
+        comment.likedBy = comment.likedBy.filter((email: string) => email !== userEmail)
+      } else {
         comment.likes += 1
-        comment.likedBy.push(session.user.email || '')
+        comment.likedBy.push(userEmail)
       }
     } else if (action === 'share') {
       comment.shares += 1
     }
 
-    await saveComments(comments, `Update comment ${action} by ${session.user.name}`)
     return NextResponse.json(comment)
   } catch (error) {
     console.error('Error in PUT:', error)

@@ -3,7 +3,8 @@
 import { useRef, useEffect } from 'react'
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
-import { Comments } from '@/components/comments'
+import {  Comments  } from '@/components/comments'
+import { GameNav } from '@/components/game/game-nav'
 
 export default function SprunkiTheSunPage() {
   const iframeRef = useRef<HTMLIFrameElement>(null)
@@ -26,6 +27,7 @@ export default function SprunkiTheSunPage() {
 
   return (
     <div className="min-h-screen bg-black/90">
+      <GameNav title="Sprunki The Sun" />
       <div className="container mx-auto py-4 px-4">
         <div className="max-w-[1920px] mx-auto">
           {/* Header */}
