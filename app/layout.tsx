@@ -4,6 +4,7 @@ import './globals.css'
 import { RootProvider } from '@/components/providers/root-provider'
 import { usePathname } from 'next/navigation'
 import React from 'react'
+import Script from 'next/script'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -64,6 +65,12 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <CanonicalTag />
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8090388788273305"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
       </head>
       <body className={inter.className}>
         <RootProvider>{children}</RootProvider>
