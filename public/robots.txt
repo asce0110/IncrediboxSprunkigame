@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://incrediboxsprunkimod.com
+
+# Sitemaps
+Sitemap: https://incrediboxsprunkimod.com/sitemap.xml

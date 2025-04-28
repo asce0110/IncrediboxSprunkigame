@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import { RootProvider } from '@/components/providers/root-provider'
+import { usePathname } from 'next/navigation'
+import React from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -47,6 +49,12 @@ export const metadata: Metadata = {
   },
 }
 
+function CanonicalTag() {
+  const pathname = usePathname()
+  const canonicalUrl = `https://incrediboxsprunkimod.com${pathname === '/' ? '' : pathname}`
+  return <link rel="canonical" href={canonicalUrl} />
+}
+
 export default function RootLayout({
   children,
 }: {
@@ -54,7 +62,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head />
+      <head>
+        <CanonicalTag />
+      </head>
       <body className={inter.className}>
         <RootProvider>{children}</RootProvider>
       </body>
