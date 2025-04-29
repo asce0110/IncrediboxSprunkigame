@@ -3,7 +3,7 @@
 import { useRef, useEffect } from 'react'
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
-import { Comments } from '@/components/comments'
+import { CommentsMock } from '@/components/comments-mock'
 import { GameNav } from '@/components/game/game-nav'
 
 export default function SprunckiAlivePage() {
@@ -31,7 +31,7 @@ export default function SprunckiAlivePage() {
       <div className="min-h-screen bg-black/90">
         <div className="container mx-auto py-4 px-4">
           <div className="max-w-4xl mx-auto">
-            {/* SEO优化的标题区域 */}
+            {/* SEO优化的标题区�?*/}
             <div className="mb-6 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
               <Link 
                 href="/" 
@@ -128,14 +128,14 @@ export default function SprunckiAlivePage() {
                 </div>
               </div>
 
-              {/* 评论区 */}
+              {/* 评论�?*/}
               <div className="bg-black/50 rounded-xl">
                 <div className="p-4 sm:p-6 border-b border-[#2EE59D]/10">
                   <h2 className="text-xl sm:text-2xl font-semibold text-[#2EE59D]">Comments</h2>
                 </div>
                 <div className="h-[400px] overflow-y-auto custom-scrollbar">
                   <div className="p-4 sm:p-6">
-                    <Comments />
+                    <CommentsMock />
                   </div>
                 </div>
               </div>

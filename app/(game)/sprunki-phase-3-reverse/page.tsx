@@ -3,7 +3,7 @@
 import { useRef, useEffect } from 'react'
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
-import {  Comments  } from '@/components/comments'
+import { CommentsMock } from '@/components/comments-mock'
 import { GameNav } from '@/components/game/game-nav'
 
 export default function SprunkiPhase3ReversePage() {
@@ -140,9 +140,10 @@ export default function SprunkiPhase3ReversePage() {
           </div>
 
           {/* Comments Section */}
-          <Comments />
+          <CommentsMock />
         </div>
       </div>
     </div>
   )
 } 
+

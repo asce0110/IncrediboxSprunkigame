@@ -3,7 +3,7 @@
 import { useRef, useEffect } from 'react'
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
-import { Comments } from '@/components/comments'
+import { CommentsMock } from '@/components/comments-mock'
 import { GameNav } from '@/components/game/game-nav'
 
 export default function SprunckiInOhioBrainrotPage() {
@@ -75,7 +75,7 @@ export default function SprunckiInOhioBrainrotPage() {
               <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black via-black/95 to-transparent z-10" />
             </div>
 
-            {/* 游戏介绍和内容 */}
+            {/* 游戏介绍和内�?*/}
             <div className="mt-8 space-y-6">
               <div className="p-4 sm:p-6 bg-black/50 rounded-xl">
                 <h2 className="text-xl sm:text-2xl font-semibold text-[#2EE59D] mb-4">
@@ -128,14 +128,14 @@ export default function SprunckiInOhioBrainrotPage() {
                 </div>
               </div>
 
-              {/* 评论区 */}
+              {/* 评论�?*/}
               <div className="bg-black/50 rounded-xl">
                 <div className="p-4 sm:p-6 border-b border-[#2EE59D]/10">
                   <h2 className="text-xl sm:text-2xl font-semibold text-[#2EE59D]">Comments</h2>
                 </div>
                 <div className="h-[400px] overflow-y-auto custom-scrollbar">
                   <div className="p-4 sm:p-6">
-                    <Comments />
+                    <CommentsMock />
                   </div>
                 </div>
               </div>
@@ -189,3 +189,4 @@ export default function SprunckiInOhioBrainrotPage() {
     </>
   )
 } 
+

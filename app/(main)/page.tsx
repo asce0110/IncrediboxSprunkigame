@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import { HeroSection } from '@/components/hero-section'
 import { FeaturedContent } from '@/components/featured-content/featured-content'
-import { Comments } from '@/components/comments'
+import { CommentsMock } from '@/components/comments-mock'
 import { MoreGames } from '@/components/more-games'
 import { Slideshow } from '@/components/slideshow/slideshow'
 import Link from 'next/link'
@@ -42,13 +42,13 @@ export const metadata: Metadata = {
 }
 
 export default function Home() {
-  // 获取推荐游戏和热门游戏
+  // 获取推荐游戏和热门游�?
   const featuredGames = getFeaturedGames(3);
   const popularGames = getPopularGames(5);
   
   return (
     <>
-      {/* 结构化数据 */}
+      {/* 结构化数�?*/}
       <AppSEO
         jsonLd="website"
         websiteData={{
@@ -66,13 +66,13 @@ export default function Home() {
             <HeroSection />
           </div>
           
-          {/* 轮播图改为卡片展示 */}
+          {/* 轮播图改为卡片展�?*/}
           <div className="relative z-10 border-t border-white/10 bg-gradient-to-b from-black to-black/80">
             <Slideshow />
           </div>
         </section>
         
-        {/* 产品价值主张 - 增加SEO权重 */}
+        {/* 产品价值主�?- 增加SEO权重 */}
         <section className="bg-black/80 py-16">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
@@ -107,15 +107,15 @@ export default function Home() {
           </div>
         </section>
         
-        {/* 精选内容 */}
+        {/* 精选内�?*/}
         <FeaturedContent />
         
-        {/* 评论和游戏区域 */}
+        {/* 评论和游戏区�?*/}
         <div className="container mx-auto px-4 py-8">
           <div className="flex flex-col lg:flex-row gap-6">
-            {/* 左侧评论区 */}
+            {/* 左侧评论�?*/}
             <div className="w-full lg:w-[400px] shrink-0">
-              <Comments />
+              <CommentsMock />
             </div>
             {/* 右侧More Games */}
             <div className="flex-1">
