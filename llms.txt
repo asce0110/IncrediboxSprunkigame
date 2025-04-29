@@ -5,19 +5,13 @@
 Incredibox Sprunki Game is a web-based music game platform that allows users to create and share their own musical compositions through an intuitive and engaging interface.
 
 ## 核心内容
-- [游戏列表](https://incrediboxsprunkimod.com/games)：提供多种音乐游戏体验
-- [创作工具](https://incrediboxsprunkimod.com/create)：帮助用户创作音乐
-- [社区](https://incrediboxsprunkimod.com/community)：分享和讨论音乐创作
+- [游戏列表](https://incrediboxsprunkimod.com/sprunked-games)：提供多种音乐游戏体验
+- [关于我们](https://incrediboxsprunkimod.com/about)：平台简介和发展历程
+- [联系我们](https://incrediboxsprunkimod.com/contact)：联系我们的渠道
 
 ## 常用资源
-- [常见问题](https://incrediboxsprunkimod.com/faq)：解答用户常见问题
-- [联系方式](https://incrediboxsprunkimod.com/contact)：联系我们的渠道
-- [帮助中心](https://incrediboxsprunkimod.com/help)：使用指南和教程
-
-## 关于我们
-- [项目介绍](https://incrediboxsprunkimod.com/about)：平台简介和发展历程
-- [使用案例](https://incrediboxsprunkimod.com/cases)：用户创作展示
-- [更新日志](https://incrediboxsprunkimod.com/changelog)：版本更新记录
+- [隐私政策](https://incrediboxsprunkimod.com/privacy)：隐私政策和使用条款
+- [GitHub](https://github.com/asce0110/IncrediboxSprunkigame)：项目源代码
 
 ## 技术信息
 - 框架：Next.js 13.5.6
