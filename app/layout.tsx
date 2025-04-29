@@ -1,59 +1,54 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import { RootProvider } from '@/components/providers/root-provider'
-import { usePathname } from 'next/navigation'
-import React from 'react'
 import Script from 'next/script'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'IncrediboxSprunkiMod - Sprunked Music Creation Games',
-  description: 'Play Sprunked and other music creation games on IncrediboxSprunkiMod. Create amazing beats, mix unique sounds, and enjoy interactive music gaming experiences.',
-  icons: {
-    icon: [
+  title: 'IncrediboxSprunkiMod - Play Incredibox Sprunki Mod Online',
+  description: 'Play the best Incredibox Sprunki mod online. Create amazing beats and music with this revolutionary music creation game.',
+  keywords: 'incredibox sprunki mod, incredibox mod, music game, beat maker, online music creator',
+  authors: [{ name: 'IncrediboxSprunkiMod Team' }],
+  creator: 'IncrediboxSprunkiMod',
+  publisher: 'IncrediboxSprunkiMod',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://incrediboxsprunkimod.com',
+    siteName: 'IncrediboxSprunkiMod',
+    title: 'IncrediboxSprunkiMod - Play Incredibox Sprunki Mod Online',
+    description: 'Play the best Incredibox Sprunki mod online. Create amazing beats and music with this revolutionary music creation game.',
+    images: [
       {
-        url: 'https://s.incrediboxsprunkimod.com/public/favicon.ico',
-        sizes: 'any',
-      },
-      {
-        url: 'https://s.incrediboxsprunkimod.com/public/favicon-96x96.png',
-        type: 'image/png',
-        sizes: '96x96',
-      },
-      {
-        url: 'https://s.incrediboxsprunkimod.com/public/web-app-manifest-192x192.png',
-        type: 'image/png',
-        sizes: '192x192',
-      },
-      {
-        url: 'https://s.incrediboxsprunkimod.com/public/web-app-manifest-512x512.png',
-        type: 'image/png',
-        sizes: '512x512',
-      },
-    ],
-    apple: [
-      {
-        url: 'https://s.incrediboxsprunkimod.com/public/apple-touch-icon.png',
-        type: 'image/png',
-        sizes: '180x180',
+        url: 'https://incrediboxsprunkimod.com/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'IncrediboxSprunkiMod - Play Incredibox Sprunki Mod Online',
       },
     ],
   },
-  manifest: '/manifest.json',
-  themeColor: '#2EE59D',
-  appleWebApp: {
-    capable: true,
-    statusBarStyle: 'default',
-    title: 'IncrediboxSprunkiMod',
+  twitter: {
+    card: 'summary_large_image',
+    title: 'IncrediboxSprunkiMod - Play Incredibox Sprunki Mod Online',
+    description: 'Play the best Incredibox Sprunki mod online. Create amazing beats and music with this revolutionary music creation game.',
+    images: ['https://incrediboxsprunkimod.com/og-image.jpg'],
+    creator: '@incrediboxsprunkimod',
   },
-}
-
-function CanonicalTag() {
-  const pathname = usePathname()
-  const canonicalUrl = `https://incrediboxsprunkimod.com${pathname === '/' ? '' : pathname}`
-  return <link rel="canonical" href={canonicalUrl} />
+  verification: {
+    google: 'your-google-site-verification',
+  },
 }
 
 export default function RootLayout({
@@ -62,9 +57,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <head>
-        <CanonicalTag />
         <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8090388788273305"
@@ -72,9 +66,7 @@ export default function RootLayout({
           strategy="afterInteractive"
         />
       </head>
-      <body className={inter.className}>
-        <RootProvider>{children}</RootProvider>
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   )
 }
