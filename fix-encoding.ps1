@@ -2,11 +2,16 @@
 # 列出所有需要修复的文件及其对应的游戏标题
 
 $files = @(
-    @{Path = "app\(game)\amazing-digital-circus\page.tsx"; Title = "Amazing Digital Circus"; Iframe = "https://html-classic.itch.zone/html/12037105/circus/index.html"},
-    @{Path = "app\(game)\christmas-sprunki\page.tsx"; Title = "Christmas Sprunki"; Iframe = "https://html-classic.itch.zone/html/12037105/christmas/index.html"},
-    @{Path = "app\(game)\gameincredibox\page.tsx"; Title = "Game Incredibox"; Iframe = "https://html-classic.itch.zone/html/12037105/incredibox/index.html"},
-    @{Path = "app\(game)\incredibox-sprunki-mod\page.tsx"; Title = "Incredibox Sprunki Mod"; Iframe = "https://html-classic.itch.zone/html/12037105/sprunki-mod/index.html"},
-    @{Path = "app\(game)\incrediboxsprunkimod\page.tsx"; Title = "Incredibox Sprunki Mod"; Iframe = "https://html-classic.itch.zone/html/12037105/sprunkimod/index.html"}
+    "app/(game)/amazing-digital-circus/page.tsx",
+    "app/(game)/christmas-sprunki/page.tsx",
+    "app/(game)/incredibox-sprunki-mod/page.tsx",
+    "app/(game)/incrediboxsprunkimod/page.tsx",
+    "app/(game)/sprunki-alive/page.tsx",
+    "app/(game)/sprunki-but-15000000-funbots/page.tsx",
+    "app/(game)/sprunki-in-ohio-brainrot/page.tsx",
+    "app/(game)/sprunki-phase-3-reverse/page.tsx",
+    "app/(game)/sprunki-the-sun/page.tsx",
+    "app/(main)/page.tsx"
 )
 
 # 模板内容
@@ -214,30 +219,12 @@ export default function {0}() {
 
 # 处理每个文件
 foreach ($file in $files) {
-    $path = $file.Path
-    $title = $file.Title
-    $iframe = $file.Iframe
-    
-    # 从文件路径生成组件类名
-    $folderName = Split-Path -Leaf (Split-Path -Parent $path)
-    $className = ($folderName -split '-' | ForEach-Object { $_.Substring(0,1).ToUpper() + $_.Substring(1) }) -join ''
-    $className = $className + "Page"
-    
-    Write-Host "Processing $path with class name $className"
-    
-    # 生成文件内容
-    $content = Get-TemplateContent -Title $title -ClassName $className -IframeSrc $iframe
-    
-    # 确保目录存在
-    $directory = Split-Path -Parent $path
-    if (!(Test-Path $directory)) {
-        New-Item -ItemType Directory -Path $directory -Force | Out-Null
+    if (Test-Path $file) {
+        $content = Get-Content $file -Raw
+        $utf8NoBOM = New-Object System.Text.UTF8Encoding $false
+        [System.IO.File]::WriteAllText($file, $content, $utf8NoBOM)
+        Write-Host "Fixed encoding for $file"
     }
-    
-    # 使用 UTF-8 编码写入文件
-    [System.IO.File]::WriteAllText($path, $content, [System.Text.Encoding]::UTF8)
-    
-    Write-Host "Fixed encoding for $path" -ForegroundColor Green
 }
 
 Write-Host "All files have been fixed!" -ForegroundColor Green 

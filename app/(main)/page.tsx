@@ -9,7 +9,7 @@ import { AppSEO } from '@/components/seo/app-seo'
 import { getFeaturedGames, getPopularGames } from '@/data/games'
 import { Music, Gamepad2, Users } from 'lucide-react'
 
-// 优化元数据，使用更详细的SEO标签
+// 浼樺寲鍏冩暟鎹紝浣跨敤鏇磋缁嗙殑SEO鏍囩
 export const metadata: Metadata = {
   title: 'IncrediboxSprunkiMod - Create Amazing Music Online | Free Music Games',
   description: 'Create amazing music with IncrediboxSprunkiMod. Play Sprunked and other interactive music creation games for free in your browser. Mix beats, create tunes, and have fun!',
@@ -42,13 +42,13 @@ export const metadata: Metadata = {
 }
 
 export default function Home() {
-  // 获取推荐游戏和热门游�?
+  // 鑾峰彇鎺ㄨ崘娓告垙鍜岀儹闂ㄦ父鎴?
   const featuredGames = getFeaturedGames(3);
   const popularGames = getPopularGames(5);
   
   return (
     <>
-      {/* 结构化数�?*/}
+      {/* 缁撴瀯鍖栨暟鎹?*/}
       <AppSEO
         jsonLd="website"
         websiteData={{
@@ -66,13 +66,13 @@ export default function Home() {
             <HeroSection />
           </div>
           
-          {/* 轮播图改为卡片展�?*/}
+          {/* 杞挱鍥炬敼涓哄崱鐗囧睍绀?*/}
           <div className="relative z-10 border-t border-white/10 bg-gradient-to-b from-black to-black/80">
             <Slideshow />
           </div>
         </section>
         
-        {/* 产品价值主�?- 增加SEO权重 */}
+        {/* 浜у搧浠峰€间富寮?- 澧炲姞SEO鏉冮噸 */}
         <section className="bg-black/80 py-16">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
@@ -107,22 +107,22 @@ export default function Home() {
           </div>
         </section>
         
-        {/* 精选内�?*/}
+        {/* 绮鹃€夊唴瀹?*/}
         <FeaturedContent />
         
-        {/* 评论和游戏区�?*/}
+        {/* 璇勮鍜屾父鎴忓尯鍩?*/}
         <div className="container mx-auto px-4 py-8">
           <div className="flex flex-col lg:flex-row gap-6">
-            {/* 左侧评论�?*/}
+            {/* 宸︿晶璇勮鍖?*/}
             <div className="w-full lg:w-[400px] shrink-0">
               <CommentsMock />
             </div>
-            {/* 右侧More Games */}
+            {/* 鍙充晶More Games */}
             <div className="flex-1">
               <div className="lg:sticky lg:top-4">
                 <MoreGames />
                 
-                {/* 添加更多内部链接，改善SEO */}
+                {/* 娣诲姞鏇村鍐呴儴閾炬帴锛屾敼鍠凷EO */}
                 <div className="mt-8 p-6 bg-black/20 rounded-xl">
                   <h2 className="text-2xl font-semibold text-[#2EE59D] mb-4">
                     Popular Music Creation Games
@@ -150,7 +150,7 @@ export default function Home() {
                   </div>
                 </div>
                 
-                {/* 添加站点导航链接 */}
+                {/* 娣诲姞绔欑偣瀵艰埅閾炬帴 */}
                 <nav className="mt-8 p-6 bg-black/20 rounded-xl">
                   <h2 className="text-xl font-semibold text-[#2EE59D] mb-4">
                     Site Navigation
@@ -195,7 +195,7 @@ export default function Home() {
           </div>
         </div>
         
-        {/* 额外的SEO文本内容，对搜索引擎友好 */}
+        {/* 棰濆鐨凷EO鏂囨湰鍐呭锛屽鎼滅储寮曟搸鍙嬪ソ */}
         <section className="bg-black/30 py-12">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">

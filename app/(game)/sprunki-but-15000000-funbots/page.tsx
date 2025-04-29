@@ -31,7 +31,7 @@ export default function SprunkiFunbotsPage() {
       <div className="min-h-screen bg-black/90">
         <div className="container mx-auto py-4 px-4">
           <div className="max-w-4xl mx-auto">
-            {/* SEO优化的标题区�?*/}
+            {/* SEO浼樺寲鐨勬爣棰樺尯鍩?*/}
             <div className="mb-4 flex items-center gap-6">
               <Link 
                 href="/" 
@@ -53,7 +53,7 @@ export default function SprunkiFunbotsPage() {
               </div>
             </div>
 
-            {/* 游戏区域 */}
+            {/* 娓告垙鍖哄煙 */}
             <div className="relative bg-black/50 rounded-xl overflow-hidden shadow-lg shadow-[#2EE59D]/10" style={{ minHeight: '600px' }}>
               <iframe 
                 ref={iframeRef}
@@ -77,7 +77,7 @@ export default function SprunkiFunbotsPage() {
               <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black via-black/95 to-transparent z-10" />
             </div>
 
-            {/* 游戏介绍和SEO内容 */}
+            {/* 娓告垙浠嬬粛鍜孲EO鍐呭 */}
             <div className="mt-8 space-y-6">
               <div className="p-6 bg-black/50 rounded-xl">
                 <h2 className="text-2xl font-semibold text-[#2EE59D] mb-4">
@@ -102,7 +102,7 @@ export default function SprunkiFunbotsPage() {
                 </div>
               </div>
 
-              {/* 游戏特点 */}
+              {/* 娓告垙鐗圭偣 */}
               <div className="p-6 bg-black/50 rounded-xl">
                 <h2 className="text-2xl font-semibold text-[#2EE59D] mb-6">
                   Why Play Sprunki But 15,000,000 FunBots?
@@ -130,7 +130,7 @@ export default function SprunkiFunbotsPage() {
                 </div>
               </div>
 
-              {/* 评论�?*/}
+              {/* 璇勮鍖?*/}
               <div className="bg-black/50 rounded-xl">
                 <div className="p-6 border-b border-[#2EE59D]/10">
                   <h2 className="text-2xl font-semibold text-[#2EE59D]">Comments</h2>
