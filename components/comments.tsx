@@ -19,7 +19,7 @@ interface Comment {
 }
 
 export function Comments() {
-  const { data: session } = useSession()
+  const { data: session, status } = useSession()
   const [comment, setComment] = useState('')
   const [comments, setComments] = useState<Comment[]>([])
   const [isLoading, setIsLoading] = useState(false)
@@ -27,8 +27,9 @@ export function Comments() {
   const [error, setError] = useState('')
 
   useEffect(() => {
+    if (status === 'loading') return
     fetchComments()
-  }, [])
+  }, [status])
 
   const fetchComments = async () => {
     setIsLoadingComments(true)
@@ -59,7 +60,10 @@ export function Comments() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ content: comment }),
+        body: JSON.stringify({ 
+          content: comment,
+          user: session.user 
+        }),
       })
 
       if (!response.ok) {
@@ -73,7 +77,7 @@ export function Comments() {
       setComment('')
     } catch (error) {
       console.error('Full error details:', error)
-      throw error
+      setError('Failed to post comment. Please try again.')
     } finally {
       setIsLoading(false)
     }
@@ -92,7 +96,11 @@ export function Comments() {
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ commentId, action }),
+          body: JSON.stringify({ 
+            commentId, 
+            action,
+            user: session.user 
+          }),
         })
 
         if (!response.ok) {
@@ -107,6 +115,7 @@ export function Comments() {
         )
       } catch (error) {
         console.error('Failed to like comment:', error)
+        setError('Failed to like comment. Please try again.')
       }
     } else if (action === 'share') {
       const comment = comments.find(c => c.id === commentId)
@@ -136,7 +145,11 @@ Join our community at ${window.location.origin}`
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ commentId, action }),
+          body: JSON.stringify({ 
+            commentId, 
+            action,
+            user: session.user 
+          }),
         })
 
         if (!response.ok) {
@@ -151,8 +164,19 @@ Join our community at ${window.location.origin}`
         )
       } catch (error) {
         console.error('Failed to share comment:', error)
+        setError('Failed to share comment. Please try again.')
       }
     }
+  }
+
+  if (status === 'loading') {
+    return (
+      <div className="p-6 bg-black/50 rounded-xl">
+        <div className="flex justify-center items-center py-12">
+          <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-[#2EE59D]"></div>
+        </div>
+      </div>
+    )
   }
 
   return (
@@ -200,7 +224,7 @@ Join our community at ${window.location.origin}`
                   )}
                 </div>
                 <p className="text-gray-300 mb-3 font-mono text-sm leading-relaxed">{comment.content}</p>
-                <div className="flex gap-6">
+                <div className="flex gap-4">
                   <button
                     onClick={() => handleAction(comment.id, 'like')}
                     className={`flex items-center gap-2 text-sm transition-colors ${
