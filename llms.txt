@@ -1,4 +1,31 @@
-# LLMs Information for Incredibox Sprunki Game
+# Incredibox Sprunki Game
+
+> A unique music game platform that combines the classic Incredibox experience with innovative gameplay and creative features.
+
+Incredibox Sprunki Game is a web-based music game platform that allows users to create and share their own musical compositions through an intuitive and engaging interface.
+
+## 核心内容
+- [游戏列表](https://incrediboxsprunkimod.com/games)：提供多种音乐游戏体验
+- [创作工具](https://incrediboxsprunkimod.com/create)：帮助用户创作音乐
+- [社区](https://incrediboxsprunkimod.com/community)：分享和讨论音乐创作
+
+## 常用资源
+- [常见问题](https://incrediboxsprunkimod.com/faq)：解答用户常见问题
+- [联系方式](https://incrediboxsprunkimod.com/contact)：联系我们的渠道
+- [帮助中心](https://incrediboxsprunkimod.com/help)：使用指南和教程
+
+## 关于我们
+- [项目介绍](https://incrediboxsprunkimod.com/about)：平台简介和发展历程
+- [使用案例](https://incrediboxsprunkimod.com/cases)：用户创作展示
+- [更新日志](https://incrediboxsprunkimod.com/changelog)：版本更新记录
+
+## 技术信息
+- 框架：Next.js 13.5.6
+- 部署：Vercel
+- 数据库：Supabase
+- AI模型：GPT-4
+- 版本：1.0.0
+- 最后更新：2024-04-29
 
 ## Model Information
 - Model: GPT-4
@@ -41,7 +68,7 @@ This website uses LLMs for:
 
 ## Contact
 For any questions about our LLMs implementation:
-- Email: support@incrediboxsprunkigame.com
+- Email: support@incrediboxsprunkimod.com
 - GitHub: https://github.com/asce0110/IncrediboxSprunkigame
 
 ## License
