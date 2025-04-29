@@ -166,4 +166,11 @@ export default function ContactPage() {
       <Footer />
     </div>
   )
+}
+
+export async function generateMetadata() {
+  return {
+    title: 'Contact Us - IncrediboxSprunkiMod',
+    description: 'Get in touch with us for any questions about our Sprunked music creation games.'
+  }
 } 

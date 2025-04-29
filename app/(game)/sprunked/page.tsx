@@ -183,4 +183,11 @@ export default function SprunkedPage() {
       </div>
     </>
   )
+}
+
+export async function generateMetadata() {
+  return {
+    title: 'Sprunked - The Ultimate Music Creation Experience',
+    description: 'Create amazing beats and music with this revolutionary music creation game'
+  }
 } 

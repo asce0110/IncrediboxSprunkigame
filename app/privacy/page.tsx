@@ -146,4 +146,11 @@ export default function PrivacyPage() {
       </div>
     </>
   )
+}
+
+export async function generateMetadata() {
+  return {
+    title: 'Privacy Policy - IncrediboxSprunkiMod',
+    description: 'Read our privacy policy to understand how we protect your data.'
+  }
 } 
