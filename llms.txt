@@ -1,0 +1,55 @@
+# LLMs Information for Incredibox Sprunki Game
+
+## Model Information
+- Model: GPT-4
+- Provider: OpenAI
+- Version: 4.0
+- Last Updated: 2024-04-29
+
+## Usage
+This website uses LLMs for:
+1. Content Generation
+2. Code Assistance
+3. Documentation
+4. User Support
+
+## Implementation Details
+- API Integration: OpenAI API
+- Model Parameters:
+  - Temperature: 0.7
+  - Max Tokens: 2000
+  - Top P: 0.9
+  - Frequency Penalty: 0.0
+  - Presence Penalty: 0.0
+
+## Security & Privacy
+- All user data is encrypted
+- No personal information is stored
+- API keys are securely managed
+- Regular security audits
+
+## Performance Metrics
+- Response Time: < 2s
+- Accuracy Rate: > 95%
+- Error Rate: < 1%
+
+## Maintenance
+- Regular model updates
+- Performance monitoring
+- Error tracking
+- User feedback integration
+
+## Contact
+For any questions about our LLMs implementation:
+- Email: support@incrediboxsprunkigame.com
+- GitHub: https://github.com/asce0110/IncrediboxSprunkigame
+
+## License
+This implementation is licensed under MIT License.
+See LICENSE file for details.
+
+## Acknowledgments
+- OpenAI for providing the GPT-4 model
+- Next.js team for the framework
+- Vercel for hosting
+- All contributors to the project 
