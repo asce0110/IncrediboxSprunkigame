@@ -42,13 +42,13 @@ export const metadata: Metadata = {
 }
 
 export default function Home() {
-  // 鑾峰彇鎺ㄨ崘娓告垙鍜岀儹闂ㄦ父鎴?
+  // 获取推荐游戏和热门游戏
   const featuredGames = getFeaturedGames(3);
   const popularGames = getPopularGames(5);
   
   return (
     <>
-      {/* 缁撴瀯鍖栨暟鎹?*/}
+      {/* 结构化数据 */}
       <AppSEO
         jsonLd="website"
         websiteData={{
@@ -60,20 +60,34 @@ export default function Home() {
       />
       
       <main>
-        {/* Hero Section */}
+        {/* Hero Section with More Games */}
         <section className="relative min-h-screen flex flex-col">
           <div className="flex-1 relative">
-            <HeroSection />
+            <div className="container mx-auto px-4">
+              <div className="flex flex-col lg:flex-row gap-6">
+                {/* Hero Section */}
+                <div className="flex-1">
+                  <HeroSection />
+                </div>
+                
+                {/* More Games Sidebar */}
+                <div className="w-full lg:w-[400px] shrink-0">
+                  <div className="lg:sticky lg:top-4">
+                    <MoreGames />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           
-          {/* 杞挱鍥炬敼涓哄崱鐗囧睍绀?*/}
+          {/* 轮播图改为卡片展示 */}
           <div className="relative z-10 border-t border-white/10 bg-gradient-to-b from-black to-black/80">
             <Slideshow />
           </div>
         </section>
         
-        {/* 浜у搧浠峰€间富寮?- 澧炲姞SEO鏉冮噸 */}
-        <section className="bg-black/80 py-16">
+        {/* 产品价值主张 - 增加SEO权重 */}
+        <section className="py-12 bg-black/30">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
               Why Choose <span className="text-[#2EE59D]">IncrediboxSprunkiMod</span>
@@ -100,102 +114,17 @@ export default function Home() {
                 <div className="bg-[#2EE59D]/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                   <Users className="w-6 h-6 text-[#2EE59D]" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">Vibrant Community</h3>
-                <p className="text-gray-300">Join thousands of music creators from around the world. Share your creations and get inspired by others.</p>
+                <h3 className="text-xl font-semibold text-white mb-3">Community</h3>
+                <p className="text-gray-300">Join a vibrant community of music creators. Share your creations and discover amazing beats from other players.</p>
               </div>
             </div>
           </div>
         </section>
         
-        {/* 绮鹃€夊唴瀹?*/}
+        {/* Featured Content */}
         <FeaturedContent />
         
-        {/* 璇勮鍜屾父鎴忓尯鍩?*/}
-        <div className="container mx-auto px-4 py-8">
-          <div className="flex flex-col lg:flex-row gap-6">
-            {/* 宸︿晶璇勮鍖?*/}
-            <div className="w-full lg:w-[400px] shrink-0">
-              <CommentsMock />
-            </div>
-            {/* 鍙充晶More Games */}
-            <div className="flex-1">
-              <div className="lg:sticky lg:top-4">
-                <MoreGames />
-                
-                {/* 娣诲姞鏇村鍐呴儴閾炬帴锛屾敼鍠凷EO */}
-                <div className="mt-8 p-6 bg-black/20 rounded-xl">
-                  <h2 className="text-2xl font-semibold text-[#2EE59D] mb-4">
-                    Popular Music Creation Games
-                  </h2>
-                  <ul className="space-y-4">
-                    {popularGames.map(game => (
-                      <li key={game.slug} className="border-b border-[#2EE59D]/10 pb-3">
-                        <Link 
-                          href={`/${game.slug}`} 
-                          className="text-white hover:text-[#2EE59D] transition-colors"
-                        >
-                          {game.title} - {game.description}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <div className="mt-6 text-center">
-                    <Link 
-                      href="/sprunked-games" 
-                      className="inline-block px-6 py-3 bg-[#2EE59D]/10 hover:bg-[#2EE59D]/20 text-[#2EE59D] rounded-lg transition-colors"
-                    >
-                      View All Games
-                    </Link>
-                  </div>
-                </div>
-                
-                {/* 娣诲姞绔欑偣瀵艰埅閾炬帴 */}
-                <nav className="mt-8 p-6 bg-black/20 rounded-xl">
-                  <h2 className="text-xl font-semibold text-[#2EE59D] mb-4">
-                    Site Navigation
-                  </h2>
-                  <ul className="grid grid-cols-2 gap-3">
-                    <li>
-                      <Link 
-                        href="/about" 
-                        className="text-gray-300 hover:text-[#2EE59D] transition-colors"
-                      >
-                        About Us
-                      </Link>
-                    </li>
-                    <li>
-                      <Link 
-                        href="/contact" 
-                        className="text-gray-300 hover:text-[#2EE59D] transition-colors"
-                      >
-                        Contact
-                      </Link>
-                    </li>
-                    <li>
-                      <Link 
-                        href="/sprunked-games" 
-                        className="text-gray-300 hover:text-[#2EE59D] transition-colors"
-                      >
-                        All Games
-                      </Link>
-                    </li>
-                    <li>
-                      <Link 
-                        href="/privacy" 
-                        className="text-gray-300 hover:text-[#2EE59D] transition-colors"
-                      >
-                        Privacy Policy
-                      </Link>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        {/* 棰濆鐨凷EO鏂囨湰鍐呭锛屽鎼滅储寮曟搸鍙嬪ソ */}
+        {/* Free Online Music Creation Games Section */}
         <section className="bg-black/30 py-12">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
