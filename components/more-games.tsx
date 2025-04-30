@@ -150,12 +150,12 @@ export function MoreGames() {
   const hasMoreGames = visibleGames < moreGames.length
 
   return (
-    <div className="bg-black/50 rounded-xl overflow-hidden">
+    <div className="bg-black/50 rounded-xl overflow-hidden flex flex-col h-[calc(100vh-2rem)]">
       <div className="p-6 border-b border-[#2EE59D]/10">
         <h2 className="text-2xl font-semibold text-[#2EE59D]">More Sprunked Games</h2>
       </div>
-      <div className="p-3">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <div className="flex-1 overflow-y-auto p-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 auto-rows-fr">
           {moreGames.slice(0, visibleGames).map((game, index) => (
             <SimpleGameCard
               key={index}
@@ -167,7 +167,7 @@ export function MoreGames() {
           ))}
         </div>
         {hasMoreGames && (
-          <div className="mt-6 flex justify-center">
+          <div className="sticky bottom-0 left-0 right-0 mt-6 flex justify-center bg-black/50 py-4">
             <Button
               onClick={loadMore}
               className="bg-gradient-to-r from-[#2EE59D]/20 to-[#2EE59D]/10 hover:from-[#2EE59D]/30 hover:to-[#2EE59D]/20 text-[#2EE59D] border border-[#2EE59D]/20 hover:border-[#2EE59D]/40 transition-all duration-300 shadow-lg hover:shadow-[#2EE59D]/20 px-6 py-2 rounded-full"
