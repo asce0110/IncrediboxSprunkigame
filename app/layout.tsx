@@ -12,6 +12,10 @@ export const metadata: Metadata = {
   authors: [{ name: 'IncrediboxSprunkiMod Team' }],
   creator: 'IncrediboxSprunkiMod',
   publisher: 'IncrediboxSprunkiMod',
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+  },
   robots: {
     index: true,
     follow: true,
