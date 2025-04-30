@@ -1,4 +1,7 @@
 import { SimpleGameCard } from './simple-game-card'
+import { useState } from 'react'
+import { Button } from './ui/button'
+import { ChevronDown } from 'lucide-react'
 
 const moreGames = [
   {
@@ -133,7 +136,17 @@ const moreGames = [
   }
 ]
 
+const GAMES_PER_PAGE = 9
+
 export function MoreGames() {
+  const [visibleGames, setVisibleGames] = useState(GAMES_PER_PAGE)
+
+  const loadMore = () => {
+    setVisibleGames(prev => prev + GAMES_PER_PAGE)
+  }
+
+  const hasMoreGames = visibleGames < moreGames.length
+
   return (
     <div className="bg-black/50 rounded-xl overflow-hidden">
       <div className="p-6 border-b border-[#2EE59D]/10">
@@ -141,7 +154,7 @@ export function MoreGames() {
       </div>
       <div className="p-3">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-          {moreGames.map((game, index) => (
+          {moreGames.slice(0, visibleGames).map((game, index) => (
             <SimpleGameCard
               key={index}
               href={game.href}
@@ -151,6 +164,17 @@ export function MoreGames() {
             />
           ))}
         </div>
+        {hasMoreGames && (
+          <div className="mt-6 flex justify-center">
+            <Button
+              onClick={loadMore}
+              className="bg-gradient-to-r from-[#2EE59D]/20 to-[#2EE59D]/10 hover:from-[#2EE59D]/30 hover:to-[#2EE59D]/20 text-[#2EE59D] border border-[#2EE59D]/20 hover:border-[#2EE59D]/40 transition-all duration-300 shadow-lg hover:shadow-[#2EE59D]/20 px-6 py-2 rounded-full"
+            >
+              <ChevronDown className="mr-2 h-4 w-4 animate-bounce" />
+              Load More Games
+            </Button>
+          </div>
+        )}
       </div>
     </div>
   )
