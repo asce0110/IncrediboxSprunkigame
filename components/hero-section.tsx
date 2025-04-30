@@ -89,26 +89,24 @@ export function HeroSection() {
         {/* CTA区域 */}
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              asChild
-              size="lg"
-              className="bg-[#2EE59D] hover:bg-[#2EE59D]/90 text-black"
-            >
-              <Link href="/sprunked">
+            <Link href="/sprunked">
+              <Button
+                size="lg"
+                className="bg-[#2EE59D] hover:bg-[#2EE59D]/90 text-black"
+              >
                 Play Sprunked
-              </Link>
-            </Button>
+              </Button>
+            </Link>
             
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="border-[#2EE59D] text-[#2EE59D] hover:bg-[#2EE59D]/10"
-            >
-              <Link href="/sprunked-games">
+            <Link href="/sprunked-games">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-[#2EE59D] text-[#2EE59D] hover:bg-[#2EE59D]/10"
+              >
                 Explore More Games
-              </Link>
-            </Button>
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
