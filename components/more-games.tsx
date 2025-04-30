@@ -154,26 +154,25 @@ export function MoreGames() {
       <div className="p-6 border-b border-[#2EE59D]/10">
         <h2 className="text-2xl font-semibold text-[#2EE59D]">More Sprunked Games</h2>
       </div>
-      <div className="flex-1 overflow-y-auto p-3 relative">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 auto-rows-fr pb-16">
-          {moreGames.slice(0, visibleGames).map((game, index) => (
-            <SimpleGameCard
-              key={index}
-              href={game.href}
-              title={game.title}
-              image={game.image}
-              compact={true}
-            />
-          ))}
+      <div className="flex-1 flex flex-col">
+        <div className="flex-1 overflow-y-auto p-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 auto-rows-fr">
+            {moreGames.slice(0, visibleGames).map((game, index) => (
+              <SimpleGameCard
+                key={index}
+                href={game.href}
+                title={game.title}
+                image={game.image}
+                compact={true}
+              />
+            ))}
+          </div>
         </div>
         {hasMoreGames && (
-          <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black/80 to-transparent pointer-events-none" />
-        )}
-        {hasMoreGames && (
-          <div className="absolute bottom-0 left-0 right-0 flex justify-center items-center h-16">
+          <div className="p-4 border-t border-white/10 bg-black/30">
             <Button
               onClick={loadMore}
-              className="bg-white/10 hover:bg-white/20 text-white border border-white/20 hover:border-white/40 transition-all duration-300 shadow-lg hover:shadow-white/20 px-6 py-2 rounded-full backdrop-blur-sm"
+              className="w-full bg-white/10 hover:bg-white/20 text-white border border-white/20 hover:border-white/40 transition-all duration-300 shadow-lg hover:shadow-white/20 px-6 py-2 rounded-full backdrop-blur-sm"
             >
               <ChevronDown className="mr-2 h-4 w-4 animate-bounce" />
               Load More Games
