@@ -1,3 +1,5 @@
+'use client'
+
 import { SimpleGameCard } from './simple-game-card'
 import { useState } from 'react'
 import { Button } from './ui/button'
