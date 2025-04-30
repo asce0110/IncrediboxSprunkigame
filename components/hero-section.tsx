@@ -60,8 +60,8 @@ export function HeroSection() {
         </div>
         
         {/* 游戏特性 */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          <div className="bg-black/30 p-6 rounded-xl border border-[#2EE59D]/10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-5xl mx-auto">
+          <div className="bg-black/30 p-6 rounded-xl border border-[#2EE59D]/10 hover:border-[#2EE59D]/30 transition-all duration-300">
             <div className="bg-[#2EE59D]/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
               <Music className="w-6 h-6 text-[#2EE59D]" />
             </div>
@@ -69,7 +69,7 @@ export function HeroSection() {
             <p className="text-gray-300">Create unique beats by mixing different sounds and rhythms</p>
           </div>
           
-          <div className="bg-black/30 p-6 rounded-xl border border-[#2EE59D]/10">
+          <div className="bg-black/30 p-6 rounded-xl border border-[#2EE59D]/10 hover:border-[#2EE59D]/30 transition-all duration-300">
             <div className="bg-[#2EE59D]/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
               <Gamepad2 className="w-6 h-6 text-[#2EE59D]" />
             </div>
@@ -77,7 +77,7 @@ export function HeroSection() {
             <p className="text-gray-300">Express yourself through interactive music creation</p>
           </div>
           
-          <div className="bg-black/30 p-6 rounded-xl border border-[#2EE59D]/10">
+          <div className="bg-black/30 p-6 rounded-xl border border-[#2EE59D]/10 hover:border-[#2EE59D]/30 transition-all duration-300">
             <div className="bg-[#2EE59D]/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
               <Users className="w-6 h-6 text-[#2EE59D]" />
             </div>
