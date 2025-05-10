@@ -9,6 +9,15 @@ import Link from 'next/link'
 
 const featuredGames = [
   {
+    id: 0,
+    title: 'Wenda Treatment Sprunki',
+    coverImage: 'https://s.incrediboxsprunkimod.com/public/wenda-treatment-sprunki.png',
+    description: 'Experience the ultimate therapeutic music creation with Wenda Treatment',
+    rating: 4.9,
+    players: 290000,
+    href: '/wenda-treatment-sprunki'
+  },
+  {
     id: 1,
     title: 'FiddleSprunkis',
     coverImage: 'https://s.incrediboxsprunkimod.com/public/FiddleSprunkis-368x207.png',
@@ -47,6 +56,14 @@ const featuredGames = [
 ]
 
 const allGames = [
+  {
+    href: "/wenda-treatment-sprunki",
+    title: "Wenda Treatment Sprunki",
+    description: "Experience the ultimate therapeutic music creation with Wenda Treatment",
+    image: "https://s.incrediboxsprunkimod.com/public/wenda-treatment-sprunki.png",
+    rating: 4.9,
+    players: 290000
+  },
   {
     href: "/gray-sprunki",
     title: "Gray Sprunki",

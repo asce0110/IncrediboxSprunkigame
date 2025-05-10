@@ -7,6 +7,11 @@ import { ChevronDown } from 'lucide-react'
 
 const moreGames = [
   {
+    title: 'Wenda Treatment Sprunki',
+    image: 'https://s.incrediboxsprunkimod.com/public/wenda-treatment-sprunki.png',
+    href: '/wenda-treatment-sprunki'
+  },
+  {
     title: 'FiddleSprunkis',
     image: 'https://s.incrediboxsprunkimod.com/public/FiddleSprunkis-368x207.png',
     href: '/fiddlesprunkis'

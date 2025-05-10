@@ -5,6 +5,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   
   // 所有游戏页面
   const gamePages = [
+    '/wenda-treatment-sprunki',
     '/sprunked',
     '/sprunki-brud',
     '/gameincredibox',

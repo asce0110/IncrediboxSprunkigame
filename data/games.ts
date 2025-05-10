@@ -12,6 +12,17 @@ export interface Game {
 
 export const GAMES: Game[] = [
   {
+    slug: "wenda-treatment-sprunki",
+    title: "Wenda Treatment Sprunki",
+    description: "Experience the ultimate therapeutic music creation with Wenda Treatment",
+    image: "https://s.incrediboxsprunkimod.com/public/wenda-treatment-sprunki.png",
+    rating: 4.9,
+    players: 290000,
+    keywords: ["therapy", "treatment", "healing sounds", "musical therapy"],
+    releaseDate: "2023-08-01",
+    isFeatured: true
+  },
+  {
     slug: "fiddlesprunkis",
     title: "FiddleSprunkis",
     description: "A folk-inspired musical journey with a Sprunki twist",
