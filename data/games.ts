@@ -15,7 +15,7 @@ export const GAMES: Game[] = [
     slug: "wenda-treatment-sprunki",
     title: "Wenda Treatment Sprunki",
     description: "Experience the ultimate therapeutic music creation with Wenda Treatment",
-    image: "https://s.incrediboxsprunkimod.com/public/wenda-treatment-sprunki.png",
+    image: "https://s.incrediboxsprunkimod.com/public/Wenda%20Treatment%20Sprunki.png",
     rating: 4.9,
     players: 290000,
     keywords: ["therapy", "treatment", "healing sounds", "musical therapy"],
