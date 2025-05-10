@@ -169,6 +169,7 @@ export function MoreGames() {
                 title={game.title}
                 image={game.image}
                 compact={true}
+                isNew={index < 3}
               />
             ))}
           </div>

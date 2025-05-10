@@ -6,9 +6,10 @@ interface SimpleGameCardProps {
   title: string
   image: string
   compact?: boolean
+  isNew?: boolean
 }
 
-export function SimpleGameCard({ href, title, image, compact = false }: SimpleGameCardProps) {
+export function SimpleGameCard({ href, title, image, compact = false, isNew = false }: SimpleGameCardProps) {
   return (
     <Link href={href} className="block group">
       <div className="relative bg-black/30 rounded-lg overflow-hidden transition-all duration-300 hover:-translate-y-1">
@@ -27,6 +28,13 @@ export function SimpleGameCard({ href, title, image, compact = false }: SimpleGa
               sizes="150px"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/0 to-black/0" />
+            
+            {/* New label */}
+            {isNew && (
+              <div className="absolute top-2 right-2 bg-[#2EE59D] text-black text-xs font-bold px-2 py-1 rounded-full shadow-lg z-20">
+                NEW
+              </div>
+            )}
           </div>
           
           {/* Title */}
